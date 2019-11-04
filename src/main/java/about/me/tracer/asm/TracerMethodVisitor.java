@@ -19,14 +19,14 @@ public class TracerMethodVisitor extends MethodVisitor {
     public void visitCode() {
         mv.visitCode();
         mv.visitLdcInsn(this.className.replace('/','.') + "." + this.methodName);
-        mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/tracer/core/Tracer", "enter", "(Ljava/lang/String;)V", true);
+        mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/tracer/core/Tracer", "enter", "(Ljava/lang/String;)V", false);
     }
 
     @Override
     public void visitInsn(int opcode) {
         if ((opcode >= Opcodes.IRETURN && opcode <= Opcodes.RETURN)
                 || opcode == Opcodes.ATHROW) {
-            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/tracer/core/Tracer", "exit", "()V", true);
+            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/tracer/core/Tracer", "exit", "()V", false);
         }
         mv.visitInsn(opcode);
     }

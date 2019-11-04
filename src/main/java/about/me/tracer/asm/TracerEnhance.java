@@ -1,6 +1,5 @@
 package about.me.tracer.asm;
 
-import about.me.tracer.test.TimerTest;
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
