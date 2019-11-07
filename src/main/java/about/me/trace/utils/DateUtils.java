@@ -1,4 +1,4 @@
-package about.me.tracer.utils;
+package about.me.trace.utils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

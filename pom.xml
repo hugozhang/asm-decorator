@@ -33,9 +33,9 @@
             <version>4.3.25.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-common</artifactId>
-            <version>2.7.4</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>4.3.25.RELEASE</version>
         </dependency>
     </dependencies>
 

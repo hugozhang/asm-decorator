@@ -1,4 +1,4 @@
-package about.me.tracer.asm;
+package about.me.trace.asm;
 
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.ClassReader;
@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
 import java.net.URL;
 
 @Slf4j
-public class TracerEnhance {
+public class TraceEnhance {
 
     private static Method findResource;
 
@@ -50,7 +50,7 @@ public class TracerEnhance {
                 log.debug("Add injected class({}) to {} failure!", className, classLoader);
                 return;
             }
-            log.debug("Added tracer function for {}", className);
+            log.debug("Added trace function for {}", className);
         } catch (IOException e) {
             log.error(e.getMessage(),e);
         } catch (IllegalAccessException e) {
@@ -63,7 +63,7 @@ public class TracerEnhance {
     private static byte[] injectByteCode(byte[] clazzByte) {
         ClassReader reader = new ClassReader(clazzByte);
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-        ClassVisitor visitor = new TracerClassVisitor(writer);
+        ClassVisitor visitor = new TraceClassVisitor(writer);
         reader.accept(visitor, 0);
         return writer.toByteArray();
     }
@@ -90,16 +90,6 @@ public class TracerEnhance {
 
     private static Class<?> defineClass(String className, byte[] clazzByte, ClassLoader classLoader) throws IllegalAccessException, InvocationTargetException {
         return (Class<?>) defineClass.invoke(classLoader, new Object[] { className, clazzByte, 0, clazzByte.length });
-    }
-
-    public static void main(String[] args) {
-        inject("about.me.tracer.test.TimerTest",Thread.currentThread().getContextClassLoader());
-
-//        Class<?> aClass = Thread.currentThread().getContextClassLoader().loadClass("about.me.tracer.test.TimerTest");
-//
-//        Method m = aClass.getMethod("m");
-//        m.invoke(aClass.newInstance(),new Object[] {});
-
     }
 
 }

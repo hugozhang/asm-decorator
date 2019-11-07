@@ -1,4 +1,4 @@
-package about.me.tracer.view;
+package about.me.trace.view;
 
 public interface View {
 

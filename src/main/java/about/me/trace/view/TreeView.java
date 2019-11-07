@@ -1,6 +1,6 @@
-package about.me.tracer.view;
+package about.me.trace.view;
 
-import about.me.tracer.utils.StringUtils;
+import about.me.trace.utils.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -39,7 +39,7 @@ public class TreeView implements View {
 
         findMaxCostNode(root);
 
-        final StringBuilder treeBuilder = new StringBuilder();
+        final StringBuilder treeBuilder = new StringBuilder("\n");
 
         final Ansi highlighted = Ansi.ansi().fg(Ansi.Color.RED);
 

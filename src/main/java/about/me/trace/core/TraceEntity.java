@@ -1,10 +1,9 @@
-package about.me.tracer.core;
+package about.me.trace.core;
 
-import about.me.tracer.utils.DateUtils;
-import about.me.tracer.utils.ThreadUtils;
-import about.me.tracer.view.TreeView;
+import about.me.trace.utils.DateUtils;
+import about.me.trace.utils.ThreadUtils;
+import about.me.trace.view.TreeView;
 import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 
 @Data
 public class TraceEntity {

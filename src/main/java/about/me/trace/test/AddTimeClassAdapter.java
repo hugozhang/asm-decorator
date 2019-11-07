@@ -1,4 +1,4 @@
-package about.me.tracer.test;
+package about.me.trace.test;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.FieldVisitor;
