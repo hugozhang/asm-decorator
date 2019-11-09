@@ -14,4 +14,7 @@ public class TimerTest {
     }
 
 
+    public String geta(){
+        return "";
+    }
 }

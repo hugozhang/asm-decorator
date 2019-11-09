@@ -29,7 +29,7 @@ public class TraceClassVisitor extends ClassVisitor {
                 || Modifier.isNative(access) || Modifier.isAbstract(access) || !Modifier.isPublic(access)) {
             return mv;
         }
-        return new TraceMethodVisitor(mv,className,name,desc);
+        return new TraceMethodVisitor(mv,access,className,name,desc);
     }
 
 

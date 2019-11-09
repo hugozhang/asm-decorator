@@ -3,11 +3,12 @@ package about.me.trace.asm;
 import about.me.cache.annotation.Cache;
 import about.me.cache.asm.CacheAnnotationVisitor;
 import org.objectweb.asm.*;
+import org.objectweb.asm.commons.AdviceAdapter;
 
 import java.util.concurrent.TimeUnit;
 
 
-public class TraceMethodVisitor extends MethodVisitor {
+public class TraceMethodVisitor extends AdviceAdapter {
 
     private String className;
 
@@ -15,16 +16,10 @@ public class TraceMethodVisitor extends MethodVisitor {
 
     private Type returnType;
 
-    private Object group;
+    private CacheAnnotationVisitor cacheAv;
 
-    private Object key;
-
-    private Object timeUnit;
-
-    private CacheAnnotationVisitor cacheAnnotationVisitor;
-
-    public TraceMethodVisitor(MethodVisitor mv,String className, String methodName,String methodDesc) {
-        super(Opcodes.ASM5,mv);
+    public TraceMethodVisitor(MethodVisitor mv,int access,String className, String methodName,String methodDesc) {
+        super(Opcodes.ASM5,mv,access,methodName,methodDesc);
         this.className = className;
         this.methodName = methodName;
         this.returnType = Type.getReturnType(methodDesc);
@@ -34,8 +29,8 @@ public class TraceMethodVisitor extends MethodVisitor {
     public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
         AnnotationVisitor av = super.visitAnnotation(descriptor, visible);
         if (Type.getDescriptor(Cache.class).equals(descriptor)) {
-            cacheAnnotationVisitor = new CacheAnnotationVisitor(av);
-            return cacheAnnotationVisitor;
+            cacheAv = new CacheAnnotationVisitor(av);
+            return cacheAv;
         }
         return av;
     }
@@ -44,26 +39,27 @@ public class TraceMethodVisitor extends MethodVisitor {
     public void visitCode() {
         mv.visitCode();
         //trace
-        mv.visitLdcInsn(this.className.replace('/','.') + "." + this.methodName);
+        push(this.className.replace('/','.') + "." + this.methodName);
         mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "enter", "(Ljava/lang/String;)V", false);
         //cache
-        if (cacheAnnotationVisitor != null) {
-            group = cacheAnnotationVisitor.annMap.get("group");
-            key = cacheAnnotationVisitor.annMap.get("key");
-            timeUnit = cacheAnnotationVisitor.annMap.get("timeUnit");
-
-            mv.visitLdcInsn(group);
-            mv.visitLdcInsn(key);
+        if (cacheAv != null) {
+            push(cacheAv.cacheParam.group);
+            push(cacheAv.cacheParam.key);
             mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "getObject", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", false);
+            //因为redis返回的是Object 需要与方法的返回类型匹配
+            //不匹配 1.如果是对象类型就强转为返回值  2.如果是基本类型则要拆箱
+            int cacheLocal = newLocal(Type.getType(Object.class));
+            storeLocal(cacheLocal);
+            loadLocal(cacheLocal);
 
-            //检查缓存对象是否为空前,先检查返回数据类型 redis返回的是Object 要与方法的返回类型匹配
-
-            mv.visitVarInsn(Opcodes.ASTORE, 1);
-            mv.visitVarInsn(Opcodes.ALOAD, 1);
             Label l1 = new Label();
             mv.visitJumpInsn(Opcodes.IFNULL, l1);
-            mv.visitVarInsn(Opcodes.ALOAD, 1);
-            mv.visitInsn(Opcodes.ARETURN);
+            loadLocal(cacheLocal);
+
+//            checkCast(returnType);
+            unbox(returnType);//内部进行是强转与拆箱操作
+            returnValue();//与返回类型匹配
+//            mv.visitInsn(Opcodes.IRETURN);
             mv.visitLabel(l1);
             mv.visitFrame(Opcodes.F_APPEND, 1, new Object[]{"java/lang/Object"}, 0, null);
         }
@@ -73,24 +69,25 @@ public class TraceMethodVisitor extends MethodVisitor {
     public void visitInsn(int opcode) {
         if ((opcode >= Opcodes.IRETURN && opcode <= Opcodes.RETURN)
                 || opcode == Opcodes.ATHROW) {
-            if (cacheAnnotationVisitor != null) {
+            if (cacheAv != null) {
                 //当前方法的返回类型如果是基本类型要包装，再放入redis，因为redis方法接收的是Object
-                int locVar = 2;
+                int returnLocal = newLocal(returnType);
                 mv.visitInsn(Opcodes.DUP);
                 //复制
-                mv.visitVarInsn(Opcodes.ASTORE,locVar);
-                mv.visitLdcInsn(group);
-                mv.visitLdcInsn(key);
-                mv.visitVarInsn(Opcodes.ALOAD, locVar);
-                mv.visitInsn(Opcodes.LCONST_1);
-                mv.visitFieldInsn(Opcodes.GETSTATIC, "java/util/concurrent/TimeUnit", timeUnit.toString(), "Ljava/util/concurrent/TimeUnit;");
+                storeLocal(returnLocal);
+                push(cacheAv.cacheParam.group);
+                push(cacheAv.cacheParam.key);
+                loadLocal(returnLocal);
+                //如果当前方法的返回类型是基本类型需要装箱
+                box(returnType);
+                push(cacheAv.cacheParam.expire);
+                mv.visitFieldInsn(Opcodes.GETSTATIC, "java/util/concurrent/TimeUnit", cacheAv.cacheParam.timeUnit, "Ljava/util/concurrent/TimeUnit;");
                 mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "putObject", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V", false);
             }
             mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "()V", false);
         }
         mv.visitInsn(opcode);
     }
-
 
 
     public static void main(String[] args) {

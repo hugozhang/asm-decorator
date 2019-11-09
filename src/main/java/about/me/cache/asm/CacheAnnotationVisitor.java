@@ -3,12 +3,9 @@ package about.me.cache.asm;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Opcodes;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class CacheAnnotationVisitor extends AnnotationVisitor {
 
-    public Map<String,Object> annMap = new HashMap<>();
+    public CacheParam cacheParam = new CacheParam();
 
     public CacheAnnotationVisitor(AnnotationVisitor av) {
         super(Opcodes.ASM5,av);
@@ -17,12 +14,35 @@ public class CacheAnnotationVisitor extends AnnotationVisitor {
     @Override
     public void visit(String name, Object value) {
         super.visit(name, value);
-        annMap.put(name,value);
+        switch (name) {
+            case "group":
+                cacheParam.group = (String) value;
+                break;
+            case "key" :
+                cacheParam.key = (String) value;
+                break;
+            case "expire" :
+                cacheParam.expire = (long) value;
+
+        }
     }
 
     @Override
     public void visitEnum(String name, String desc, String value) {
         super.visitEnum(name, desc, value);
-        annMap.put(name,value);
+        cacheParam.timeUnit = value;
+    }
+
+    public class CacheParam {
+        public String group;
+        public String key;
+        public long expire;
+        public String timeUnit;
+    }
+
+    public static void main(String[] args) {
+
+        Object a = null;
+        System.out.println((Long) a);
     }
 }

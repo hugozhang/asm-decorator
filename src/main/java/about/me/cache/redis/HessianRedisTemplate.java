@@ -32,7 +32,7 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
 
     private static HessianRedisTemplate getInstance() {
         if (applicationContext == null) {
-            throw new BeanInstantiationException(HessianRedisTemplate.class,"");
+            throw new BeanInstantiationException(HessianRedisTemplate.class,"HessianRedisTemplate no in ApplicationContext.");
         }
         HessianRedisTemplate redisTemplate = applicationContext.getBean(HessianRedisTemplate.class);
         return redisTemplate;

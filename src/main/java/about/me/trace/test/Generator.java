@@ -28,6 +28,8 @@ public class Generator {
 //            }
 //        },1,TimeUnit.SECONDS);
 
+//        new TimerTest().get();
+//
         try {
             ClassReader cr = new ClassReader("about/me/trace/test/TimerTest");
             // ClassWriter extends ClassVisitor
@@ -44,7 +46,6 @@ public class Generator {
 
             new TimerTest().get();
 
-            //new TimerTest().m();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
