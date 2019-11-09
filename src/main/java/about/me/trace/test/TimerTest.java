@@ -1,11 +1,17 @@
 package about.me.trace.test;
 
 
-public interface TimerTest {
+import about.me.cache.annotation.Cache;
+
+import java.util.concurrent.TimeUnit;
 
 
-     void m() ;
+public class TimerTest {
 
-     void n();
+    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
+    public Object get() {
+        return new User();
+    }
+
 
 }

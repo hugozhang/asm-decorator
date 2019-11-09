@@ -11,14 +11,14 @@ public class TraceClassVisitor extends ClassVisitor {
 
     private String className;
 
-    boolean isInterface;
+    private boolean isInterface;
 
     public TraceClassVisitor(ClassVisitor cv) {
         super(Opcodes.ASM5,cv);
     }
 
     public void visit(int version, int access, String name, String signature, String superName, String[] interfaces) {
-        isInterface = ((access & Opcodes.ACC_INTERFACE) == Opcodes.ACC_INTERFACE);
+        isInterface = Modifier.isInterface(access);
         this.className = name;
         super.visit(version, access, name, signature, superName, interfaces);
     }
@@ -29,7 +29,7 @@ public class TraceClassVisitor extends ClassVisitor {
                 || Modifier.isNative(access) || Modifier.isAbstract(access) || !Modifier.isPublic(access)) {
             return mv;
         }
-        return new TraceMethodVisitor(mv,className,name);
+        return new TraceMethodVisitor(mv,className,name,desc);
     }
 
 
