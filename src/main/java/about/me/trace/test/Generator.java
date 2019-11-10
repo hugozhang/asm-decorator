@@ -4,6 +4,7 @@ package about.me.trace.test;
 //import org.apache.dubbo.common.timer.Timeout;
 //import org.apache.dubbo.common.timer.TimerTask;
 import about.me.trace.asm.TraceClassVisitor;
+import about.me.trace.core.Trace;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
@@ -50,6 +51,9 @@ public class Generator {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        } /*catch (Exception e) {
+            e.printStackTrace();
+            Trace.exit(e.getMessage());
+        }*/
     }
 }

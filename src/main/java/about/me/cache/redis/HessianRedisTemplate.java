@@ -39,16 +39,10 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
     }
 
     public static Object getObject(String group, String key) {
-        System.out.println(group);
-        System.out.println(key);
         return getInstance().get(group,key);
     }
 
     public static void putObject(String group,String key,Object value,long expire, TimeUnit timeUnit) {
-        System.out.println(group);
-        System.out.println(key);
-        System.out.println(value);
-        System.out.println(expire);
         getInstance().put(group,key,value,expire,timeUnit);
     }
 
