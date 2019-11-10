@@ -102,8 +102,9 @@ public class TraceMethodVisitor extends AdviceAdapter {
         //重点
         mv.visitFrame(Opcodes.F_FULL, 1, new Object[]{className}, 1, new Object[]{"java/lang/RuntimeException"});
         dup();
-        storeLocal(1);
-        loadLocal(1);
+        int exceptionLocal = newLocal(Type.getType(Exception.class));
+        storeLocal(exceptionLocal);
+        loadLocal(exceptionLocal);
         mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Exception", "getMessage", "()Ljava/lang/String;", false);
         mv.visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "(Ljava/lang/String;)V", false);
         throwException();
