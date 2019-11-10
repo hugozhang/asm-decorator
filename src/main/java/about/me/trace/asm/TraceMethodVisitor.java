@@ -77,7 +77,6 @@ public class TraceMethodVisitor extends AdviceAdapter {
 
     @Override
     public void onMethodExit(int opcode) {
-        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "()V", false);
         //有返回值并且有@Cache
         if (opcode == Opcodes.ATHROW || cacheAnnotation == null) return;
         dup();
@@ -93,6 +92,7 @@ public class TraceMethodVisitor extends AdviceAdapter {
         push(cacheAnnotation.cacheParam.expire);
         visitFieldInsn(Opcodes.GETSTATIC, "java/util/concurrent/TimeUnit", cacheAnnotation.cacheParam.timeUnit, "Ljava/util/concurrent/TimeUnit;");
         visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "putObject", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V", false);
+        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "()V", false);
     }
 
     @Override

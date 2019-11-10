@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78285bd9-8d77-4265-86bb-ba1b9a19fc71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/test/Generator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/test/TimerTest.java" afterDir="false" />
     </list>
     <ignored path="target/" />
     <manually-removed-from-ignored>
@@ -27,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/test/TimerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="28" selection-end-column="7" />
+            <state relative-caret-position="304">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#235#236#0" expanded="true" />
@@ -41,11 +37,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="34">
+              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4224#4225#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#384#385#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -160,12 +170,12 @@
         <option value="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/Cache.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/A.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/Generator.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/TimerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java" />
       </list>
     </option>
@@ -778,18 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-            <element signature="e#384#385#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/classes/about/me/trace/test/A.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -977,10 +975,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#384#385#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/test/TimerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="28" selection-end-column="7" />
+        <state relative-caret-position="304">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#235#236#0" expanded="true" />
@@ -991,8 +1001,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="34">
+          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4224#4225#0" expanded="true" />
