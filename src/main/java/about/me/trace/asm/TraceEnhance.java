@@ -34,7 +34,7 @@ public class TraceEnhance {
 
     public static void inject(String className, ClassLoader classLoader) {
         try {
-            URL url = (URL) findResource.invoke(classLoader, new Object[] { className.replace(".", File.separator) + ".class" });
+            URL url = (URL) findResource.invoke(classLoader, new Object[] { className });
             if (url == null) {
                 log.debug("{} not found!", className);
                 return;

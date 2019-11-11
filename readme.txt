@@ -1,3 +1,7 @@
+
 本地线程方法执行环节时间计算
 1.在class被load前改写
-2.或者在定义filter优先改写加载
+2.或者在定义filter优先在spring容器启动前改写再被加载
+3.定义自己的classloader加载
+
+基于redis实现的缓存注解
