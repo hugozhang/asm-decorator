@@ -5,3 +5,6 @@
 3.定义自己的classloader加载
 
 基于redis实现的缓存注解
+
+
+JDK 7 可以设置-XX:-UseSplitVerifier，关闭Stack Map Frames特性

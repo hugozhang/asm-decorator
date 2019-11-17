@@ -65,7 +65,7 @@ public class PkgUtils {
         }
         for (File f : dirFiles) {
             if (f.isDirectory()) {
-                findClassesByFile(pkgName + "/" + f.getName(),
+                findClassesByFile(pkgName + "." + f.getName(),
                         pkgPath + "/" + f.getName(),
                         classes);
                 continue;
@@ -75,8 +75,8 @@ public class PkgUtils {
             }
             // 获取类名，干掉 ".class" 后缀
             String className = f.getName();
-//            className = className.substring(0, className.length() - 6);
-            classes.add(pkgName + "/" + className);
+            className = className.substring(0, className.length() - 6);
+            classes.add(pkgName + "." + className);
         }
     }
 
@@ -104,9 +104,8 @@ public class PkgUtils {
                 continue;
             }
             // 去掉后面的".class", 将路径转为package格式
-//            className = name.substring(0, name.length() - 6);
-//            classes.add(className.replace("/", "."));
-            classes.add(name);
+            className = name.substring(0, name.length() - 6);
+            classes.add(className.replace("/", "."));
         }
     }
 }
