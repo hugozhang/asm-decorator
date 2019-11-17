@@ -45,7 +45,7 @@ public class Generator {
             fout.close();
             System.out.println("success!");
 
-            System.out.println(new TimerTest().get(null));
+            System.out.println(new TimerTest().geta());
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

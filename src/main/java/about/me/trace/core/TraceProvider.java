@@ -33,6 +33,6 @@ public class TraceProvider {
 
     public static void main(String[] args) {
         new TraceProvider("about.me.trace.test.bean");
-        new TimerTest().get("");
+        new TimerTest().geta();
     }
 }

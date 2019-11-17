@@ -2,8 +2,6 @@ package about.me.trace.test.bean;
 
 
 import about.me.cache.annotation.Cache;
-import about.me.cache.redis.HessianRedisTemplate;
-import about.me.trace.core.Trace;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,6 +14,27 @@ public class TimerTest {
         User user = new User();
         user.setA(22);
         return user;
+    }
+
+    public Object geta(){
+        try{
+            if (true){
+                throw new RuntimeException("");
+            }
+            a2();
+        } catch (Exception e) {
+
+        }
+        return new User();
+    }
+
+    public void a1(){}
+
+    public void a2(){}
+
+
+    public void throwException(){
+        throw new RuntimeException("");
     }
 
 //    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)

@@ -1,12 +1,14 @@
 package about.me.trace.view;
 
 import about.me.trace.utils.StringUtils;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 public class TreeView implements View {
 
     private static final String STEP_FIRST_CHAR = "`---";
@@ -129,7 +131,9 @@ public class TreeView implements View {
     @Override
     public View end() {
         if (current.isRoot()) {
-            throw new IllegalStateException("current node is root.");
+            log.info("current node is root.");
+            return this;
+            //throw new IllegalStateException("current node is root.");
         }
         current.markEnd();
         current = current.parent;
@@ -143,7 +147,10 @@ public class TreeView implements View {
      */
     public View end(String mark) {
         if (current.isRoot()) {
-            throw new IllegalStateException("current node is root.");
+            log.info("current node is root.");
+            return this;
+//            throw new IllegalStateException("current node is root.");
+
         }
         current.markEnd().mark(mark);
         current = current.parent;

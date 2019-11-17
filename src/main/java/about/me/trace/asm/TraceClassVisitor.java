@@ -30,9 +30,9 @@ public class TraceClassVisitor extends ClassVisitor {
                 || Modifier.isNative(access) || Modifier.isAbstract(access) || !Modifier.isPublic(access)) {
             return mv;
         }
-//        return new TraceMethodVisitor(mv, access, owner, name, desc);
+        return new TraceMethodVisitor(mv, access, owner, name, desc);
 
-        return new RedisCacheMethodVisitor(mv, access, name, desc);
+//        return new RedisCacheMethodVisitor(mv, access, name, desc);
 
     }
 }
