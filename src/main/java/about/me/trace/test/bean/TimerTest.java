@@ -12,48 +12,24 @@ public class TimerTest {
 
     @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
     public Object get(String a)  {
-        if (a != null) {
-            throw new RuntimeException("123");
-        }
-        return new User();
-//
-//        try {
-//                User a = new User();
-//                if (a != null) {
-////                    throw new RuntimeException("qq");
-////                    return  aa();
-//                    return a;
-//                }
-//
-////            try {
-////                System.out.println(12);
-////                String a = "123";
-////                if (a == null) {
-////                    return new User();
-////                }
-////                System.out.println(34);
-////                return new User();
-////            } catch (Exception e) {
-////                throw new RuntimeException("");
-////            }
-//            return new User();
-//        } catch (Exception e) {
-//            throw e;
-//        }
-//        return new User();
 
-
-
-
-//        try {
-//
-//        } catch (Exception e) {
-//            throw e;
-//        }
-
-
-//        return new User();
+        User user = new User();
+        user.setA(22);
+        return user;
     }
+
+//    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
+//    public Object get(String a)  {
+//        Object o = HessianRedisTemplate.getObject("", "");
+//        if (o != null) return o;
+//        if (a != null) {
+//            throw new RuntimeException("123");
+//        }
+//        User user = new User();
+//        HessianRedisTemplate.putObject("","",user,1,TimeUnit.MINUTES);
+//        return user;
+//    }
+
 
 //    public Object aa(){
 //        Object object = HessianRedisTemplate.getObject("", "");

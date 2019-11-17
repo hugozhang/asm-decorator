@@ -37,7 +37,7 @@ public class Generator {
             ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
             ClassVisitor classAdapter = new TraceClassVisitor(cw);
             // 使给定的访问者访问Java类的ClassReader
-            cr.accept(classAdapter, ClassReader.SKIP_DEBUG);
+            cr.accept(classAdapter, ClassReader.EXPAND_FRAMES);
             byte[] data = cw.toByteArray();
             File file = new File("/Users/hugozxh/workspace/trace/target/classes/about/me/trace/test/bean/TimerTest.class");
             FileOutputStream fout = new FileOutputStream(file);
@@ -45,7 +45,7 @@ public class Generator {
             fout.close();
             System.out.println("success!");
 
-            new TimerTest().get(null);
+            System.out.println(new TimerTest().get(null));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
