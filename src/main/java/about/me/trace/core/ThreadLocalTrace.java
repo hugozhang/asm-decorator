@@ -31,13 +31,9 @@ public class ThreadLocalTrace {
         ThreadLocalTrace.getInstance().threadBoundEntity.remove();
     }
 
-    public static boolean isEmpty(){
-        return --threadBoundEntity.get().deep == 0;
-    }
 
     public static void finish() {
-        //已经回退完
-        if (isEmpty()) {
+        if (--threadBoundEntity.get().deep == 0) {
             log.info(ThreadLocalTrace.getView().draw());
             System.out.println(ThreadLocalTrace.getView().draw());
             ThreadLocalTrace.reset();

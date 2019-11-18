@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class TimerTest {
 
     @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
-    public Object get(String a)  {
+    public User get(String a)  {
 
         User user = new User();
         user.setA(22);
@@ -19,7 +19,7 @@ public class TimerTest {
     public Object geta(){
         try{
             if (true){
-                throw new RuntimeException("");
+                throwException();
             }
             a2();
         } catch (Exception e) {

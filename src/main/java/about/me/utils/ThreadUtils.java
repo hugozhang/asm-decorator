@@ -1,4 +1,4 @@
-package about.me.trace.utils;
+package about.me.utils;
 
 public class ThreadUtils {
 

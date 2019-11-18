@@ -1,6 +1,6 @@
 package about.me.trace.view;
 
-import about.me.trace.utils.StringUtils;
+import about.me.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;

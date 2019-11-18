@@ -31,7 +31,7 @@ public class TraceMethodVisitor extends AdviceAdapter {
         //不能放在visitEnd()
         if (opcode == ATHROW) {
             dup();
-            visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Exception", "getMessage", "()Ljava/lang/String;", false);
+            visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Throwable", "getMessage", "()Ljava/lang/String;", false);
             visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "(Ljava/lang/String;)V", false);
         } else {
             visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "()V", false);

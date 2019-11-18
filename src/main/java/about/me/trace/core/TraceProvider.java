@@ -2,21 +2,55 @@ package about.me.trace.core;
 
 import about.me.trace.asm.TraceEnhance;
 import about.me.trace.test.bean.TimerTest;
-import about.me.trace.utils.PkgUtils;
-import org.springframework.util.StringUtils;
+import about.me.utils.PkgUtils;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.util.AntPathMatcher;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Slf4j
 public class TraceProvider {
 
-    private String CONFIG_LOCATION_DELIMITERS = ",; \t\n";
+    private static AntPathMatcher antPathMatcher = new AntPathMatcher();
 
-    public TraceProvider(String basePackages) {
-        if (basePackages == null) {
-            throw new IllegalArgumentException("basePackages is required.");
+    private static String locationSuffix = "/**/*.class";
+
+    public void scan(String locationPattern) {
+        String rootDirPath = determineRootDir(toLocation(locationPattern));
+//        String subPattern = locationPattern.substring(rootDirPath.length());
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        Set<String> clzFromPkg = PkgUtils.getClzFromPkg(rootDirPath.replace('/','.'));
+        for ( String clz : clzFromPkg ) {
+            if (antPathMatcher.match(toLocation(locationPattern + locationSuffix),toLocation(clz + locationSuffix))) {
+                log.info("Match class is {}.",clz);
+                TraceEnhance.inject(clz,loader);
+            }
         }
-        doScan(StringUtils.tokenizeToStringArray(basePackages, CONFIG_LOCATION_DELIMITERS));
+    }
+
+    private String toLocation(String packagePath) {
+        String replace = packagePath.replace('.', '/');
+        return replace;
+    }
+
+    private String determineRootDir(String location) {
+        int prefixEnd = location.indexOf(":") + 1;
+        int rootDirEnd = location.length();
+        while (rootDirEnd > prefixEnd && antPathMatcher.isPattern(location.substring(prefixEnd, rootDirEnd))) {
+            rootDirEnd = location.lastIndexOf('/', rootDirEnd - 2);
+        }
+        if (rootDirEnd == 0) {
+            rootDirEnd = prefixEnd;
+        }
+        return location.substring(0, rootDirEnd);
+    }
+
+    public TraceProvider() {
+//        if (basePackages == null) {
+//            throw new IllegalArgumentException("basePackages is required.");
+//        }
+//        doScan(StringUtils.tokenizeToStringArray(basePackages, CONFIG_LOCATION_DELIMITERS));
     }
 
     public void doScan(String... basePackages) {
@@ -31,8 +65,18 @@ public class TraceProvider {
         }
     }
 
+    private static boolean isMatch(String pattern,String location) {
+        return antPathMatcher.match(pattern,location);
+    }
+
     public static void main(String[] args) {
-        new TraceProvider("about.me.trace.test.bean");
-        new TimerTest().geta();
+        new TraceProvider().scan("about.me.trace.test.bean");
+        new TimerTest().get("");
+
+//        System.out.println(isMatch("com/juma/*/a","com/juma/b/a"));
+
+//        new TraceProvider().scan("about/me/**/bean");
+
+
     }
 }

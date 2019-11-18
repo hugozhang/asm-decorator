@@ -1,8 +1,8 @@
 package about.me.trace.core;
 
-import about.me.trace.utils.DateUtils;
-import about.me.trace.utils.ThreadUtils;
 import about.me.trace.view.TreeView;
+import about.me.utils.DateUtils;
+import about.me.utils.ThreadUtils;
 import lombok.Data;
 
 @Data

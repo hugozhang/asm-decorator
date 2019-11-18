@@ -60,8 +60,9 @@ public class TraceEnhance {
     private static byte[] injectByteCode(byte[] clazzByte) {
         ClassReader reader = new ClassReader(clazzByte);
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-        org.objectweb.asm.util.TraceClassVisitor tv=new org.objectweb.asm.util.TraceClassVisitor(writer,new PrintWriter(System.out));
-        ClassVisitor visitor = new TraceClassVisitor(tv);
+        //
+//        org.objectweb.asm.util.TraceClassVisitor tv=new org.objectweb.asm.util.TraceClassVisitor(writer,new PrintWriter(System.out));
+        ClassVisitor visitor = new TraceClassVisitor(writer);
         reader.accept(visitor, ClassReader.EXPAND_FRAMES);
         return writer.toByteArray();
     }
