@@ -2,6 +2,7 @@ package about.me.trace.core;
 
 import about.me.trace.asm.TraceEnhance;
 import about.me.trace.test.bean.TimerTest;
+import about.me.trace.test.User;
 import about.me.utils.PkgUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.AntPathMatcher;
@@ -65,13 +66,12 @@ public class TraceProvider {
         }
     }
 
-    private static boolean isMatch(String pattern,String location) {
-        return antPathMatcher.match(pattern,location);
-    }
-
     public static void main(String[] args) {
         new TraceProvider().scan("about.me.trace.test.bean");
-        new TimerTest().get("");
+        User user = new User();
+        user.setName("Java");
+        user.setA(123456789);
+        new TimerTest().get(123);
 
 //        System.out.println(isMatch("com/juma/*/a","com/juma/b/a"));
 

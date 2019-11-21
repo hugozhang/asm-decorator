@@ -1,7 +1,7 @@
 package about.me.trace.test.stati;
 
 
-import about.me.trace.test.bean.User;
+import about.me.trace.test.User;
 
 public class Print {
 

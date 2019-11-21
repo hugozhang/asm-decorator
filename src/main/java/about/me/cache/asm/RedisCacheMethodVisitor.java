@@ -1,23 +1,32 @@
 package about.me.cache.asm;
 
 import about.me.cache.annotation.Cache;
+import about.me.cache.asm.bean.MethodArg;
+import about.me.cache.asm.bean.ClassField;
+import about.me.utils.AsmUtils;
+import about.me.utils.StringUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.*;
 import org.objectweb.asm.commons.AdviceAdapter;
 
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-
+@Slf4j
 public class RedisCacheMethodVisitor extends AdviceAdapter {
 
-    private Type returnType;
+    private String methodDesc;
 
     private CacheAnnotationVisitor cacheAnnotation;
 
     private boolean isCache = Boolean.FALSE;
 
-    public RedisCacheMethodVisitor(MethodVisitor mv, int access, String methodName, String methodDesc) {
+    private Map<String, MethodArg> methodArg;
+
+    public RedisCacheMethodVisitor(MethodVisitor mv,String owner, int access, String methodName, String methodDesc) {
         super(Opcodes.ASM5,mv,access,methodName,methodDesc);
-        this.returnType = Type.getReturnType(methodDesc);
+        this.methodDesc = methodDesc;
+        this.methodArg = AsmUtils.readMethodArg(owner);
     }
 
     @Override
@@ -32,22 +41,44 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
     }
 
     @Override
-    public void visitCode() {
+    public void onMethodEnter() {
         if (!isCache) return;
         //cache
         push(cacheAnnotation.cacheParam.group);
-        push(cacheAnnotation.cacheParam.key);
+        String cacheKey = cacheAnnotation.cacheParam.key;
+        String[] keys = cacheKey.split("\\.");
+        int len = keys.length;
+        MethodArg arg = this.methodArg.get(keys[0]);
+        Type type = Type.getType(arg.desc);
+        if (!this.methodArg.containsKey(keys[0])) {
+            throw new IllegalArgumentException("argument " + keys[0] + " not exist.");
+        }
+        loadArg(arg.index - 1);//非静态方法第一个参数是this
+        if (len == 1) {
+            //类型转换
+            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;", false);
+        } else if (len == 2) {
+            Map<String, ClassField> classField = AsmUtils.readClassField(type.getInternalName());
+            if (!classField.containsKey(keys[1])) {
+                throw new IllegalArgumentException("argument " +keys[0] + " -> " + type.getClassName() + " not exist field -> " + keys[1] + ".");
+            }
+            ClassField cf = classField.get(keys[1]);
+            mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, arg.desc, "get"+ StringUtils.capitalize(keys[1]), "()" + cf.desc, false);
+            //转型String
+            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;", false);
+        } else {
+            throw new IllegalArgumentException("argument " + cacheKey + " invalid.");
+        }
         visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "getObject", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", false);
         //因为redis返回的是Object 需要与方法的返回类型匹配
         //不匹配 1.如果是对象类型就强转为返回值  2.如果是基本类型则要拆箱
         int cacheLocal = newLocal(Type.getType(Object.class));
         storeLocal(cacheLocal);
-
         loadLocal(cacheLocal);
         Label l0 = new Label();
         ifNull(l0);
         loadLocal(cacheLocal);
-        unbox(returnType);//内部进行是强转与拆箱操作
+        unbox(Type.getReturnType(this.methodDesc));//内部进行是强转与拆箱操作
         //重点
         returnValue();//与返回类型匹配
         visitLabel(l0);
@@ -61,7 +92,7 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
         if (opcode == Opcodes.ATHROW || opcode == Opcodes.RETURN || !isCache) return;
         //有返回值并且有@Cache
         dup();
-        box(returnType);//主要解决返回基本类型的情况
+        box(Type.getReturnType(this.methodDesc));//主要解决返回基本类型的情况
         //如果不想存临时变量，就使用把栈顶元素交换两次 swap
         int returnLocal = newLocal(Type.getType(Object.class));
         storeLocal(returnLocal);
@@ -70,7 +101,6 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
         push(cacheAnnotation.cacheParam.key);
 //        swap();
         loadLocal(returnLocal);
-//        //当前方法的返回类型如果是基本类型要包装，再放入redis，因为redis方法接收的是Object
         push(cacheAnnotation.cacheParam.expire);
         visitFieldInsn(Opcodes.GETSTATIC, "java/util/concurrent/TimeUnit", cacheAnnotation.cacheParam.timeUnit, "Ljava/util/concurrent/TimeUnit;");
         visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "putObject", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V", false);
@@ -80,6 +110,18 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
     }
 
     public static void main(String[] args) {
+
         System.out.println(Type.getInternalName(TimeUnit.class));
+
+        System.out.println("a.b".split("\\.")[0]);
+
+        String a = "asdasd[99]";
+        if (a.indexOf("[") < 0 || a.indexOf("]") < 0) {
+
+        }
+        System.out.println(a.substring(a.indexOf("[") + 1,a.indexOf("]")));
+
+        System.out.println(a.indexOf("["));
+        System.out.println(a.indexOf("]"));
     }
 }

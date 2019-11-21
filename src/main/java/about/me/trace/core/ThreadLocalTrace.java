@@ -35,7 +35,6 @@ public class ThreadLocalTrace {
     public static void finish() {
         if (--threadBoundEntity.get().deep == 0) {
             log.info(ThreadLocalTrace.getView().draw());
-            System.out.println(ThreadLocalTrace.getView().draw());
             ThreadLocalTrace.reset();
         }
     }

@@ -1,8 +1,6 @@
 package about.me.trace.test.frame;
 
-import about.me.cache.redis.HessianRedisTemplate;
-import about.me.trace.core.Trace;
-import about.me.trace.test.bean.User;
+import about.me.trace.test.User;
 
 
 public class Receiver {

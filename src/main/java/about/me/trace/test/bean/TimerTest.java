@@ -2,40 +2,49 @@ package about.me.trace.test.bean;
 
 
 import about.me.cache.annotation.Cache;
+import about.me.trace.test.User;
 
 import java.util.concurrent.TimeUnit;
 
 
 public class TimerTest {
 
-    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
-    public User get(String a)  {
+//    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
+//    public User get(String a)  {
+//
+//        User user = new User();
+//        user.getA();
+//        return user;
+//    }
+
+    @Cache(group = "aa",key = "u",expire = 1,timeUnit = TimeUnit.HOURS)
+    public User get(int u)  {
 
         User user = new User();
-        user.setA(22);
+        user.getA();
         return user;
     }
 
-    public Object geta(){
-        try{
-            if (true){
-                throwException();
-            }
-            a2();
-        } catch (Exception e) {
-
-        }
-        return new User();
-    }
-
-    public void a1(){}
-
-    public void a2(){}
-
-
-    public void throwException(){
-        throw new RuntimeException("");
-    }
+//    public Object geta(){
+//        try{
+//            if (true){
+//                throwException();
+//            }
+//            a2();
+//        } catch (Exception e) {
+//
+//        }
+//        return new User();
+//    }
+//
+//    public void a1(){}
+//
+//    public void a2(){}
+//
+//
+//    public void throwException(){
+//        throw new RuntimeException("");
+//    }
 
 //    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
 //    public Object get(String a)  {

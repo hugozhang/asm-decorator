@@ -131,9 +131,10 @@ public class TreeView implements View {
     @Override
     public View end() {
         if (current.isRoot()) {
-            log.info("current node is root.");
+            //程序结构有不合理的地方
+            log.error("current node is root.");
+//            throw new IllegalStateException("current node is root.");
             return this;
-            //throw new IllegalStateException("current node is root.");
         }
         current.markEnd();
         current = current.parent;
@@ -146,11 +147,11 @@ public class TreeView implements View {
      * @return this
      */
     public View end(String mark) {
+        //程序结构有不合理的地方
         if (current.isRoot()) {
             log.info("current node is root.");
-            return this;
 //            throw new IllegalStateException("current node is root.");
-
+            return this;
         }
         current.markEnd().mark(mark);
         current = current.parent;
