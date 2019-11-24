@@ -39,6 +39,30 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
         }
         return av;
     }
+    private void toString(Type type) {
+        switch (type.getSort()) {
+            case Type.BOOLEAN:
+                throw new IllegalArgumentException("argument type boolean isn't support.");
+            case Type.BYTE:
+            case Type.CHAR:
+            case Type.SHORT:
+            case Type.INT:
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;", false);
+                break;
+            case Type.FLOAT:
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(F)Ljava/lang/String;", false);
+                break;
+            case Type.LONG:
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(J)Ljava/lang/String;", false);
+                break;
+            case Type.DOUBLE:
+                mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(D)Ljava/lang/String;", false);
+                break;
+            case Type.OBJECT:
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Object", "toString", "()Ljava/lang/String;", false);
+                break;
+        }
+    }
 
     @Override
     public void onMethodEnter() {
@@ -55,8 +79,7 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
         }
         loadArg(arg.index - 1);//非静态方法第一个参数是this
         if (len == 1) {
-            //类型转换
-            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;", false);
+            toString(type);
         } else if (len == 2) {
             Map<String, ClassField> classField = AsmUtils.readClassField(type.getInternalName());
             if (!classField.containsKey(keys[1])) {
@@ -64,8 +87,7 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
             }
             ClassField cf = classField.get(keys[1]);
             mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, arg.desc, "get"+ StringUtils.capitalize(keys[1]), "()" + cf.desc, false);
-            //转型String
-            mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(I)Ljava/lang/String;", false);
+            toString(Type.getType(cf.desc));
         } else {
             throw new IllegalArgumentException("argument " + cacheKey + " invalid.");
         }
