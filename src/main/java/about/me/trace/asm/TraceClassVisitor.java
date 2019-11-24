@@ -28,12 +28,17 @@ public class TraceClassVisitor extends ClassVisitor {
     public MethodVisitor visitMethod(int access, String name, String desc, String signature, String[] exceptions) {
         MethodVisitor mv = super.visitMethod(access, name, desc, signature, exceptions);
         if (isInterface || "<init>".equals(name) || "<clinit>".equals(name)
-                || Modifier.isNative(access) || Modifier.isAbstract(access) || !Modifier.isPublic(access)) {
+                || Modifier.isNative(access) || Modifier.isAbstract(access) || Modifier.isStatic(access) || !Modifier.isPublic(access)) {
             return mv;
         }
-//        return new TraceMethodVisitor(mv, access, owner, name, desc);
+
+//        用visitor模式实现级联会报以下错
+//        java.lang.IllegalArgumentException: LocalVariablesSorter only accepts expanded frames (see ClassReader.EXPAND_FRAMES)
+//        所以用继承来实现
+//        TraceMethodVisitor traceMethodVisitor = new TraceMethodVisitor(mv, access, owner, name, desc);
+//        RedisCacheMethodVisitor methodVisitor = new RedisCacheMethodVisitor(traceMethodVisitor,owner,access, name, desc);
+//        return traceMethodVisitor;
         RedisCacheMethodVisitor methodVisitor = new RedisCacheMethodVisitor(mv,owner,access, name, desc);
         return methodVisitor;
-
     }
 }

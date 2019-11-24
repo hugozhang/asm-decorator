@@ -38,20 +38,6 @@ public class TraceMethodVisitor extends AdviceAdapter {
         }
     }
 
-    @Override
-    public void visitEnd() {
-//        catchException(tryCatchStart,tryCatchEnd,Type.getType(Exception.class));
-        //重点
-//        mv.visitFrame(Opcodes.F_SAME1, 0, null, 1, new Object[]{"java/lang/Exception"});
-//        dup();
-//        int exceptionLocal = newLocal(Type.getType(Exception.class));
-//        storeLocal(exceptionLocal);
-//        loadLocal(exceptionLocal);
-//        visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Exception", "getMessage", "()Ljava/lang/String;", false);
-//        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "exit", "(Ljava/lang/String;)V", false);
-//        throwException();
-    }
-
     public static void main(String[] args) {
         System.out.println(Type.getInternalName(TimeUnit.class));
     }

@@ -48,7 +48,7 @@ public class Generator {
             User user = new User();
             user.setName("java");
 
-//            System.out.println(new TimerTest().get(user));
+            System.out.println(new TimerTest().get(user));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

@@ -3,17 +3,17 @@ package about.me.cache.asm;
 import about.me.cache.annotation.Cache;
 import about.me.cache.asm.bean.MethodArg;
 import about.me.cache.asm.bean.ClassField;
+import about.me.trace.asm.TraceMethodVisitor;
 import about.me.utils.AsmUtils;
 import about.me.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.*;
-import org.objectweb.asm.commons.AdviceAdapter;
 
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class RedisCacheMethodVisitor extends AdviceAdapter {
+public class RedisCacheMethodVisitor extends TraceMethodVisitor {
 
     private String methodDesc;
 
@@ -24,7 +24,7 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
     private Map<String, MethodArg> methodArg;
 
     public RedisCacheMethodVisitor(MethodVisitor mv,String owner, int access, String methodName, String methodDesc) {
-        super(Opcodes.ASM5,mv,access,methodName,methodDesc);
+        super(mv,access,owner,methodName,methodDesc);
         this.methodDesc = methodDesc;
         this.methodArg = AsmUtils.readMethodArg(owner);
     }
@@ -66,6 +66,7 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
 
     @Override
     public void onMethodEnter() {
+        super.onMethodEnter();
         if (!isCache) return;
         //cache
         push(cacheAnnotation.cacheParam.group);
@@ -111,6 +112,7 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
 
     @Override
     public void onMethodExit(int opcode) {
+        super.onMethodExit(opcode);
         if (opcode == Opcodes.ATHROW || opcode == Opcodes.RETURN || !isCache) return;
         //有返回值并且有@Cache
         dup();
