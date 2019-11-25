@@ -149,7 +149,7 @@ public class TreeView implements View {
     public View end(String mark) {
         //程序结构有不合理的地方
         if (current.isRoot()) {
-            log.info("current node is root.");
+            log.error("current node is root.");
 //            throw new IllegalStateException("current node is root.");
             return this;
         }
