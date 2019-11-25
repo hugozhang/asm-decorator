@@ -7,7 +7,6 @@ import about.me.utils.PkgUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.AntPathMatcher;
 
-import java.util.HashSet;
 import java.util.Set;
 
 @Slf4j
@@ -54,17 +53,6 @@ public class TraceProvider {
 //        doScan(StringUtils.tokenizeToStringArray(basePackages, CONFIG_LOCATION_DELIMITERS));
     }
 
-    public void doScan(String... basePackages) {
-        Set<String> clzFromPkgSet = new HashSet<>();
-        ClassLoader loader = Thread.currentThread().getContextClassLoader();
-        for ( String basePackage : basePackages ) {
-            Set<String> clzFromPkg = PkgUtils.getClzFromPkg(basePackage);
-            clzFromPkgSet.addAll(clzFromPkg);
-        }
-        for ( String clz : clzFromPkgSet ) {
-            TraceEnhance.inject(clz,loader);
-        }
-    }
 
     public static void main(String[] args) {
         new TraceProvider().scan("about.me.trace.test.bean");

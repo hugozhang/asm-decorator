@@ -157,11 +157,6 @@ public class TreeView implements View {
         Node parent;
 
         /**
-         * 前缀
-         */
-        String prefix = "";
-
-        /**
          * 节点数据
          */
         String data;
