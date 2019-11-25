@@ -44,14 +44,16 @@ public class ThreadLocalTrace {
 
         System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
         System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c"));
+        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c2"));
+        System.out.println(ThreadLocalTrace.getView().end());
+        System.out.println(ThreadLocalTrace.getView().end());
+        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
+        System.out.println(ThreadLocalTrace.getView().end());
         System.out.println(ThreadLocalTrace.getView().end());
         System.out.println(ThreadLocalTrace.getView().end());
         System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
         System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c"));
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c"));
+        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c2"));
         System.out.println(ThreadLocalTrace.getView().end());
         System.out.println(ThreadLocalTrace.getView().end());
         System.out.println(ThreadLocalTrace.getView().end());

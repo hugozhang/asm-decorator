@@ -63,11 +63,11 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
     }
 
     public static void clearGroup(String group) {
-        clearGroup(group);
+        getInstance().clear(group);
     }
 
     public static int getGroupSize(String group) {
-        return getGroupSize(group);
+        return getInstance().getSize(group);
     }
 
     @Override

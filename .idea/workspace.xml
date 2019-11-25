@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78285bd9-8d77-4265-86bb-ba1b9a19fc71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" afterDir="false" />
     </list>
     <ignored path="target/" />
@@ -26,50 +29,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="654">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/Collection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="148">
+              <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/ArrayDeque.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="583" selection-start-line="583" selection-end-line="583" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1092#1093#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1522#1523#0" expanded="true" />
-                <element signature="e#1577#1578#0" expanded="true" />
+                <element signature="e#18965#18966#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#348#349#0" expanded="true" />
-                <element signature="e#386#387#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceEnhance.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -77,54 +62,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-              <folding>
-                <element signature="e#2067#2068#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/View.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="561" column="16" selection-start-line="561" selection-start-column="16" selection-end-line="561" selection-end-column="16" />
-              <folding>
-                <element signature="e#12054#12055#0" expanded="true" />
-                <element signature="e#12095#12096#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="72" column="27" selection-start-line="72" selection-start-column="18" selection-end-line="72" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -142,11 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>LocalVariablesSorter</find>
-      <find>dup</find>
-      <find>storeLocal</find>
-      <find>visitVarInsn</find>
-      <find>CHECK</find>
       <find>box</find>
       <find>HessianRedisTemplate</find>
       <find>INTER</find>
@@ -172,6 +115,11 @@
       <find>toString</find>
       <find>unbox</find>
       <find>marks</find>
+      <find>STEP_EMPTY_BOARD</find>
+      <find>STEP_HAS_BOARD</find>
+      <find>TIME_UNIT</find>
+      <find>prefix</find>
+      <find>deep</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -212,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/MethodArg.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceEnhance.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/Generator.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java" />
@@ -223,8 +170,10 @@
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/DummyReadWriteLock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" />
         <option value="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" />
       </list>
     </option>
@@ -264,6 +213,151 @@
             <path>
               <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
               <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="asm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="asm" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="cache" type="462c0819:PsiDirectoryNode" />
+              <item name="redis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="trace" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="trace" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="me" type="462c0819:PsiDirectoryNode" />
+              <item name="trace" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -305,7 +399,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RedisCacheMethodVisitor">
+  <component name="RunManager" selected="Application.ThreadLocalTrace">
     <configuration name="CacheAnnotationVisitor" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="about.me.cache.asm.CacheAnnotationVisitor" />
       <module name="asm-decorator" />
@@ -345,11 +439,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Textifier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.objectweb.asm.util.Textifier" />
+    <configuration name="ThreadLocalTrace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="about.me.trace.core.ThreadLocalTrace" />
+      <module name="asm-decorator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.objectweb.asm.util.*" />
+          <option name="PATTERN" value="about.me.trace.core.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -436,15 +531,15 @@
       <item itemvalue="Application.TimeCountAdapater" />
       <item itemvalue="Application.TraceProvider" />
       <item itemvalue="Application.RedisCacheMethodVisitor" />
-      <item itemvalue="Application.Textifier" />
+      <item itemvalue="Application.ThreadLocalTrace" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadLocalTrace" />
         <item itemvalue="Application.RedisCacheMethodVisitor" />
         <item itemvalue="Application.Generator" />
         <item itemvalue="Application.TraceProvider" />
         <item itemvalue="Application.TimeCountAdapater" />
-        <item itemvalue="Application.Textifier" />
       </list>
     </recent_temporary>
   </component>
@@ -466,12 +561,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Capture Tool" order="1" />
       <window_info id="Favorites" order="2" sideWeight="0.70481926" side_tool="true" weight="0.16380544" />
       <window_info id="Image Layers" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.7523992" visible="true" weight="0.34549356" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.7523992" weight="0.24248926" />
       <window_info id="Structure" order="5" sideWeight="0.24760076" side_tool="true" weight="0.22103004" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.23012048" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49642345" weight="0.48554218" />
@@ -479,7 +575,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32891566" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49642345" weight="0.36746988" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49642345" weight="0.31084338" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49928468" weight="0.40722892" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -498,7 +594,7 @@
       <window_info id="Capture Tool" order="1" />
       <window_info id="Favorites" order="2" sideWeight="0.70481926" side_tool="true" weight="0.16380544" />
       <window_info id="Image Layers" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.7523992" visible="true" weight="0.34549356" />
+      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.7523992" weight="0.24248926" />
       <window_info id="Structure" order="5" sideWeight="0.24760076" side_tool="true" weight="0.22103004" />
       <window_info anchor="bottom" id="Messages" order="0" weight="0.23012048" />
       <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49642345" weight="0.48554218" />
@@ -506,7 +602,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32891566" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49642345" weight="0.36746988" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49642345" visible="true" weight="0.31084338" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49928468" weight="0.40722892" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -609,12 +705,6 @@
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java</url>
-          <line>53</line>
-          <properties />
-          <option name="timeStamp" value="122" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/GeneratorAdapter.java</url>
           <line>833</line>
           <properties />
@@ -637,6 +727,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>node.toString()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>type.getSort()</expression-string>
         <language-id>JAVA</language-id>
@@ -677,67 +772,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>location.substring(prefixEnd, rootDirEnd))</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/1.8.23.RELEASE/spring-data-redis-1.8.23.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="1062" column="51" selection-start-line="1062" selection-start-column="51" selection-end-line="1062" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4297">
-          <caret line="2353" column="20" selection-start-line="2353" selection-start-column="20" selection-end-line="2353" selection-end-column="20" />
-          <folding>
-            <element signature="e#93265#93266#0" expanded="true" />
-            <element signature="e#93303#93304#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/Void.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/MethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6061">
-          <caret line="347" column="14" selection-start-line="347" selection-start-column="14" selection-end-line="347" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="737" column="26" selection-start-line="737" selection-start-column="18" selection-end-line="737" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/InstructionAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15352">
-          <caret line="907" column="14" selection-start-line="907" selection-start-column="14" selection-end-line="907" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -894,13 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/annotation/Cache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/MethodRemapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -915,56 +945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/MethodArg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/ClassField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/Opcodes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="528" column="6" selection-start-line="528" selection-start-column="6" selection-end-line="528" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2774">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1027,62 +1011,12 @@
       </provider>
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/DummyReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1418#1419#0" expanded="true" />
-            <element signature="e#1454#1455#0" expanded="true" />
-            <element signature="e#1520#1521#0" expanded="true" />
-            <element signature="e#1646#1647#0" expanded="true" />
-            <element signature="e#1697#1698#0" expanded="true" />
-            <element signature="e#1936#1937#0" expanded="true" />
-            <element signature="e#1962#1963#0" expanded="true" />
-            <element signature="e#2257#2258#0" expanded="true" />
-            <element signature="e#2285#2286#0" expanded="true" />
-            <element signature="e#2435#2436#0" expanded="true" />
-            <element signature="e#2476#2477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1522#1523#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1130,13 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/Trace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1144,17 +1071,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/View.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="779">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#2245#2246#0" expanded="true" />
+            <element signature="e#2299#2300#0" expanded="true" />
+            <element signature="e#2350#2351#0" expanded="true" />
+            <element signature="e#2397#2398#0" expanded="true" />
+            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2495#2496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="59" selection-start-line="16" selection-start-column="59" selection-end-line="16" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/DummyReadWriteLock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2774">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#283#284#0" expanded="true" />
+            <element signature="e#321#322#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/MethodArg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/ClassField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/annotation/Cache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="561" column="16" selection-start-line="561" selection-start-column="16" selection-end-line="561" selection-end-column="16" />
+        <state relative-caret-position="133">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
           <folding>
             <element signature="e#12054#12055#0" expanded="true" />
             <element signature="e#12095#12096#0" expanded="true" />
@@ -1162,13 +1173,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/Vector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="143" column="20" selection-start-line="143" selection-start-column="20" selection-end-line="143" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="478" column="6" selection-start-line="478" selection-start-column="6" selection-end-line="478" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/ArrayDeque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="583" selection-start-line="583" selection-end-line="583" />
+          <folding>
+            <element signature="e#18965#18966#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="143" column="12" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="53" column="77" lean-forward="true" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="e#2067#2068#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="654">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>

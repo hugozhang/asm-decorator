@@ -9,7 +9,7 @@ public class Ansi {
     private static final char FIRST_ESC_CHAR = 27;
     private static final char SECOND_ESC_CHAR = '[';
 
-    public static enum Color {
+    public enum Color {
         BLACK(0, "BLACK"),
         RED(1, "RED"),
         GREEN(2, "GREEN"),

@@ -3,10 +3,7 @@ package about.me.trace.view;
 import about.me.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 public class TreeView implements View {
@@ -38,51 +35,41 @@ public class TreeView implements View {
 
     @Override
     public String draw() {
-
         findMaxCostNode(root);
-
-        final StringBuilder treeBuilder = new StringBuilder("\n");
-
-        final Ansi highlighted = Ansi.ansi().fg(Ansi.Color.RED);
-
-        recursive(0, true, "", root, new Callback() {
-
-            @Override
-            public void callback(int deep, boolean isLast, String prefix, Node node) {
-                treeBuilder.append(prefix).append(isLast ? STEP_FIRST_CHAR : STEP_NORMAL_CHAR);
-                if (isPrintCost && !node.isRoot()) {
-                    if (node == maxCost) {
-                        // the node with max cost will be highlighted
-                        treeBuilder.append(highlighted.a(node.toString()).reset().toString());
-                    } else {
-                        treeBuilder.append(node.toString());
-                    }
-                }
-                treeBuilder.append(node.data);
-                if (!StringUtils.isBlank(node.mark)) {
-                    treeBuilder.append(" [").append(node.mark).append(node.marks > 1 ? "," + node.marks : "").append("]");
-                }
-                treeBuilder.append("\n");
-            }
-
-        });
-
-        return treeBuilder.toString();
+        StringBuilder treeBuilder = new StringBuilder("\n");
+        return recursive(0,true,"",root,treeBuilder);
     }
 
     /**
      * 递归遍历
      */
-    private void recursive(int deep, boolean isLast, String prefix, Node node, Callback callback) {
-        callback.callback(deep, isLast, prefix, node);
+    private String recursive(int deep, boolean isLast, String prefix, Node node,StringBuilder treeBuilder) {
+        //处理当前节点
+        Ansi highlighted = Ansi.ansi().fg(Ansi.Color.RED);
+        treeBuilder.append(prefix).append(isLast ? STEP_FIRST_CHAR : STEP_NORMAL_CHAR);
+        if (isPrintCost && !node.isRoot()) {
+            if (node == maxCost) {
+                // the node with max cost will be highlighted
+                treeBuilder.append(highlighted.a(node.toString()).reset().toString());
+            } else {
+                treeBuilder.append(node.toString());
+            }
+        }
+        treeBuilder.append(node.data);
+        if (!StringUtils.isBlank(node.mark)) {
+            treeBuilder.append(" [").append(node.mark).append(node.marks > 1 ? "," + node.marks : "").append("]");
+        }
+        treeBuilder.append("\n");
+        //处理叶子节点
         if (!node.isLeaf()) {
             final int size = node.children.size();
             for (int index = 0; index < size; index++) {
                 final boolean isLastFlag = index == size - 1;
                 final String currentPrefix = isLast ? prefix + STEP_EMPTY_BOARD : prefix + STEP_HAS_BOARD;
-                recursive(deep + 1, isLastFlag, currentPrefix, node.children.get(index), callback);
+                recursive(deep + 1, isLastFlag, currentPrefix, node.children.get(index),treeBuilder);
             }
         }
+        return treeBuilder.toString();
     }
 
     /**
@@ -167,19 +154,24 @@ public class TreeView implements View {
         /**
          * 父节点
          */
-        final Node parent;
+        Node parent;
+
+        /**
+         * 前缀
+         */
+        String prefix = "";
 
         /**
          * 节点数据
          */
-        final String data;
+        String data;
 
         /**
          * 子节点
          */
-        final List<Node> children = new ArrayList();
+        List<Node> children = new ArrayList();
 
-        final Map<String, Node> map = new HashMap();
+        Map<String, Node> map = new HashMap();
 
         /**
          * 开始时间戳
