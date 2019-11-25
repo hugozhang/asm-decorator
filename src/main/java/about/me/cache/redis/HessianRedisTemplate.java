@@ -30,6 +30,18 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
         boundHashOps(group).expire(expire,timeUnit);
     }
 
+    private Long remove(String group,String key) {
+        return boundHashOps(group).delete(key);
+    }
+
+    private void clear(String group) {
+        boundHashOps(group).expire(0,TimeUnit.NANOSECONDS);
+    }
+
+    private int getSize(String group) {
+        return boundHashOps(group).size().intValue();
+    }
+
     private static HessianRedisTemplate getInstance() {
         if (applicationContext == null) {
             throw new BeanInstantiationException(HessianRedisTemplate.class,"HessianRedisTemplate not exist in ApplicationContext.");
@@ -44,6 +56,18 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
 
     public static void putObject(String group,String key,Object value,long expire, TimeUnit timeUnit) {
         getInstance().put(group,key,value,expire,timeUnit);
+    }
+
+    public static Long removeObject(String group,String key) {
+        return getInstance().remove(group,key);
+    }
+
+    public static void clearGroup(String group) {
+        clearGroup(group);
+    }
+
+    public static int getGroupSize(String group) {
+        return getGroupSize(group);
     }
 
     @Override

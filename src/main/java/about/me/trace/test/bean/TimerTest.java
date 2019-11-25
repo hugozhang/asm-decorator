@@ -17,7 +17,7 @@ public class TimerTest {
 //        return user;
 //    }
 
-    @Cache(group = "aa",key = "u.a",expire = 1,timeUnit = TimeUnit.HOURS)
+    @Cache(group = "aa",key = "u.name",expire = 1,timeUnit = TimeUnit.HOURS)
     public User get(User u)  {
         User user = new User();
         user.getA();
