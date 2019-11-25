@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78285bd9-8d77-4265-86bb-ba1b9a19fc71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" afterDir="false" />
     </list>
     <ignored path="target/" />
@@ -32,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
+            <state relative-caret-position="345">
+              <caret line="295" column="5" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -575,33 +572,6 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Version Control" order="4" weight="0.32891566" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49642345" weight="0.31084338" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49928468" weight="0.40722892" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="ASM" order="1" weight="0.48783976" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297568" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="Favorites" order="2" sideWeight="0.70481926" side_tool="true" weight="0.16380544" />
-      <window_info id="Image Layers" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.7523992" weight="0.24248926" />
-      <window_info id="Structure" order="5" sideWeight="0.24760076" side_tool="true" weight="0.22103004" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.23012048" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49642345" weight="0.48554218" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5035765" side_tool="true" weight="0.6313253" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32891566" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
       <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49642345" visible="true" weight="0.31084338" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49928468" weight="0.40722892" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -615,7 +585,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1241,8 +1211,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        <state relative-caret-position="345">
+          <caret line="295" column="5" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
         </state>
       </provider>
     </entry>

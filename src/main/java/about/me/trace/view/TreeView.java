@@ -294,14 +294,4 @@ public class TreeView implements View {
             return sb.toString();
         }
     }
-
-
-    /**
-     * 遍历回调接口
-     */
-    private interface Callback {
-
-        void callback(int deep, boolean isLast, String prefix, Node node);
-
-    }
 }
