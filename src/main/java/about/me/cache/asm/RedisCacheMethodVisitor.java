@@ -9,7 +9,7 @@ import about.me.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.*;
 
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
@@ -59,17 +59,14 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
                 mv.visitMethodInsn(Opcodes.INVOKESTATIC, "java/lang/String", "valueOf", "(D)Ljava/lang/String;", false);
                 break;
             case Type.OBJECT:
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Object", "toString", "()Ljava/lang/String;", false);
+                if (!type.getClassName().equals(String.class.getName())) {
+                    mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/lang/Object", "toString", "()Ljava/lang/String;", false);
+                }
                 break;
         }
     }
 
-    @Override
-    public void onMethodEnter() {
-        super.onMethodEnter();
-        if (!isCache) return;
-        //cache
-        push(cacheAnnotation.cacheParam.group);
+    private void parseKey () {
         String cacheKey = cacheAnnotation.cacheParam.key;
         String[] keys = cacheKey.split("\\.");
         int len = keys.length;
@@ -87,11 +84,20 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
                 throw new IllegalArgumentException("argument " +keys[0] + " -> " + type.getClassName() + " not exist field -> " + keys[1] + ".");
             }
             ClassField cf = classField.get(keys[1]);
-            mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, arg.desc, "get"+ StringUtils.capitalize(keys[1]), "()" + cf.desc, false);
+            visitMethodInsn(Opcodes.INVOKEVIRTUAL, arg.desc, "get"+ StringUtils.capitalize(keys[1]), "()" + cf.desc, false);
             toString(Type.getType(cf.desc));
         } else {
             throw new IllegalArgumentException("argument " + cacheKey + " invalid.");
         }
+    }
+
+    @Override
+    public void onMethodEnter() {
+        super.onMethodEnter();
+        if (!isCache) return;
+        //cache
+        push(cacheAnnotation.cacheParam.group);
+        parseKey();
         visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "getObject", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", false);
         //因为redis返回的是Object 需要与方法的返回类型匹配
         //不匹配 1.如果是对象类型就强转为返回值  2.如果是基本类型则要拆箱
@@ -107,12 +113,11 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
         visitLabel(l0);
         //有分支语句 必须有visitFrame这个检查class文件  jdk 1.7以后 没有会提示以下类似的错误
         //java.lang.VerifyError: Expecting a stackmap frame at branch target
-        mv.visitFrame(Opcodes.F_APPEND, 1, new Object[]{"java/lang/Object"}, 0, null);
+        //mv.visitFrame(Opcodes.F_APPEND, 1, new Object[]{"java/lang/Object"}, 0, null);
     }
 
     @Override
     public void onMethodExit(int opcode) {
-        super.onMethodExit(opcode);
         if (opcode == Opcodes.ATHROW || opcode == Opcodes.RETURN || !isCache) return;
         //有返回值并且有@Cache
         dup();
@@ -122,7 +127,7 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
         storeLocal(returnLocal);
         push(cacheAnnotation.cacheParam.group);
 //        swap();
-        push(cacheAnnotation.cacheParam.key);
+        parseKey();
 //        swap();
         loadLocal(returnLocal);
         push(cacheAnnotation.cacheParam.expire);
@@ -131,6 +136,7 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
 //        以下两个是测试方法
 //        visitMethodInsn(Opcodes.INVOKESTATIC, Type.getInternalName(Print.class), "print", "(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;J)V", false);
 //        visitMethodInsn(Opcodes.INVOKESTATIC, Type.getInternalName(Print.class), "print2", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;J)V", false);
+        super.onMethodExit(opcode);
     }
 
     public static void main(String[] args) {

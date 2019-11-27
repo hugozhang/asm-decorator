@@ -39,7 +39,7 @@ public class Generator {
             // 使给定的访问者访问Java类的ClassReader
             cr.accept(classAdapter, ClassReader.EXPAND_FRAMES);
             byte[] data = cw.toByteArray();
-            File file = new File("/Users/hugozxh/workspace/trace/target/classes/about/me/trace/test/bean/TimerTest.class");
+            File file = new File("/Users/hugozxh/workspace/asm-decorator/target/classes/about/me/trace/test/bean/TimerTest.class");
             FileOutputStream fout = new FileOutputStream(file);
             fout.write(data);
             fout.close();
@@ -48,7 +48,7 @@ public class Generator {
             User user = new User();
             user.setName("java");
 
-            System.out.println(new TimerTest().get(user));
+//            System.out.println(new TimerTest().get(user));
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();

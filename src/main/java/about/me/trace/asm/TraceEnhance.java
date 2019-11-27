@@ -59,7 +59,7 @@ public class TraceEnhance {
 
     private static byte[] injectByteCode(byte[] clazzByte) {
         ClassReader reader = new ClassReader(clazzByte);
-        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_MAXS);
+        ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
         ClassVisitor visitor = new TraceClassVisitor(writer);
         reader.accept(visitor, ClassReader.EXPAND_FRAMES);
         return writer.toByteArray();

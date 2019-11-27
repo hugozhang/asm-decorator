@@ -2,6 +2,8 @@ package about.me.trace.test.bean;
 
 
 import about.me.cache.annotation.Cache;
+import about.me.cache.redis.HessianRedisTemplate;
+import about.me.trace.core.Trace;
 import about.me.trace.test.User;
 
 import java.util.concurrent.TimeUnit;
@@ -17,10 +19,10 @@ public class TimerTest {
 //        return user;
 //    }
 
-    @Cache(group = "aa",key = "u.name",expire = 1,timeUnit = TimeUnit.HOURS)
-    public User get(User u)  {
+    @Cache(group = "aa",key = "u",expire = 1,timeUnit = TimeUnit.HOURS)
+    public User get(String u)  {
+        if (u == null) return new User();
         User user = new User();
-        user.getA();
         return user;
     }
 
