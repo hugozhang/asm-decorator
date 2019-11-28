@@ -39,10 +39,4 @@ public class CacheAnnotationVisitor extends AnnotationVisitor {
         public long expire;
         public String timeUnit;
     }
-
-    public static void main(String[] args) {
-
-        Object a = null;
-        System.out.println((Long) a);
-    }
 }

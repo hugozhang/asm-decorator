@@ -59,7 +59,7 @@ public class TraceProvider {
         User user = new User();
         user.setName("Java");
         user.setA(123456789);
-        new TimerTest().get("123456789");
+        new TimerTest().get("123");
 
 //        System.out.println(isMatch("com/juma/*/a","com/juma/b/a"));
 

@@ -3,17 +3,17 @@ package about.me.cache.asm;
 import about.me.cache.annotation.Cache;
 import about.me.cache.asm.bean.MethodArg;
 import about.me.cache.asm.bean.ClassField;
-import about.me.trace.asm.TraceMethodVisitor;
 import about.me.utils.AsmUtils;
 import about.me.utils.StringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.*;
+import org.objectweb.asm.commons.AdviceAdapter;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
-public class RedisCacheMethodVisitor extends TraceMethodVisitor {
+public class RedisCacheMethodVisitor extends AdviceAdapter {
 
     private String methodDesc;
 
@@ -23,8 +23,8 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
 
     private Map<String, MethodArg> methodArg;
 
-    public RedisCacheMethodVisitor(MethodVisitor mv,String owner, int access, String methodName, String methodDesc) {
-        super(mv,access,owner,methodName,methodDesc);
+    public RedisCacheMethodVisitor(MethodVisitor mv, int access,String owner, String methodName, String methodDesc) {
+        super(ASM5,mv,access,methodName,methodDesc);
         this.methodDesc = methodDesc;
         this.methodArg = AsmUtils.readMethodArg(owner);
     }
@@ -39,6 +39,8 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
         }
         return av;
     }
+
+    //缓存的暴露接口参数用Object，就不用转了
     private void toString(Type type) {
         switch (type.getSort()) {
             case Type.BOOLEAN:
@@ -77,7 +79,7 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
         }
         loadArg(arg.index - 1);//非静态方法第一个参数是this
         if (len == 1) {
-            toString(type);
+            box(type);//基本类型需要装箱
         } else if (len == 2) {
             Map<String, ClassField> classField = AsmUtils.readClassField(type.getInternalName());
             if (!classField.containsKey(keys[1])) {
@@ -85,7 +87,7 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
             }
             ClassField cf = classField.get(keys[1]);
             visitMethodInsn(Opcodes.INVOKEVIRTUAL, arg.desc, "get"+ StringUtils.capitalize(keys[1]), "()" + cf.desc, false);
-            toString(Type.getType(cf.desc));
+            box(Type.getType(cf.desc));
         } else {
             throw new IllegalArgumentException("argument " + cacheKey + " invalid.");
         }
@@ -98,7 +100,7 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
         //cache
         push(cacheAnnotation.cacheParam.group);
         parseKey();
-        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "getObject", "(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;", false);
+        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "getObject", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", false);
         //因为redis返回的是Object 需要与方法的返回类型匹配
         //不匹配 1.如果是对象类型就强转为返回值  2.如果是基本类型则要拆箱
         int cacheLocal = newLocal(Type.getType(Object.class));
@@ -132,7 +134,7 @@ public class RedisCacheMethodVisitor extends TraceMethodVisitor {
         loadLocal(returnLocal);
         push(cacheAnnotation.cacheParam.expire);
         visitFieldInsn(Opcodes.GETSTATIC, "java/util/concurrent/TimeUnit", cacheAnnotation.cacheParam.timeUnit, "Ljava/util/concurrent/TimeUnit;");
-        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "putObject", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V", false);
+        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "putObject", "(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;JLjava/util/concurrent/TimeUnit;)V", false);
 //        以下两个是测试方法
 //        visitMethodInsn(Opcodes.INVOKESTATIC, Type.getInternalName(Print.class), "print", "(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;J)V", false);
 //        visitMethodInsn(Opcodes.INVOKESTATIC, Type.getInternalName(Print.class), "print2", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;J)V", false);

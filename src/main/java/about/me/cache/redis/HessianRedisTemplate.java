@@ -9,7 +9,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 
 import java.util.concurrent.TimeUnit;
 
-public class HessianRedisTemplate extends RedisTemplate<String, Object> implements ApplicationContextAware {
+public class HessianRedisTemplate extends RedisTemplate<Object, Object> implements ApplicationContextAware {
 
     private static ApplicationContext applicationContext;
 
@@ -21,24 +21,24 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
         setHashValueSerializer(hessianSerializer);
     }
 
-    private Object get(String group, String key) {
+    private Object get(Object group, Object key) {
         return boundHashOps(group).get(key);
     }
 
-    private void put(String group,String key,Object value,long expire, TimeUnit timeUnit) {
+    private void put(Object group,Object key,Object value,long expire, TimeUnit timeUnit) {
         boundHashOps(group).put(key,value);
         boundHashOps(group).expire(expire,timeUnit);
     }
 
-    private Long remove(String group,String key) {
+    private Long remove(Object group,Object key) {
         return boundHashOps(group).delete(key);
     }
 
-    private void clear(String group) {
+    private void clear(Object group) {
         boundHashOps(group).expire(0,TimeUnit.NANOSECONDS);
     }
 
-    private int getSize(String group) {
+    private int getSize(Object group) {
         return boundHashOps(group).size().intValue();
     }
 
@@ -50,23 +50,23 @@ public class HessianRedisTemplate extends RedisTemplate<String, Object> implemen
         return redisTemplate;
     }
 
-    public static Object getObject(String group, String key) {
+    public static Object getObject(Object group, Object key) {
         return getInstance().get(group,key);
     }
 
-    public static void putObject(String group,String key,Object value,long expire, TimeUnit timeUnit) {
+    public static void putObject(Object group,Object key,Object value,long expire, TimeUnit timeUnit) {
         getInstance().put(group,key,value,expire,timeUnit);
     }
 
-    public static Long removeObject(String group,String key) {
+    public static Long removeObject(Object group,Object key) {
         return getInstance().remove(group,key);
     }
 
-    public static void clearGroup(String group) {
+    public static void clearGroup(Object group) {
         getInstance().clear(group);
     }
 
-    public static int getGroupSize(String group) {
+    public static int getGroupSize(Object group) {
         return getInstance().getSize(group);
     }
 

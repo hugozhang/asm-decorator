@@ -34,7 +34,7 @@ public class MyBatisRedisCache implements Cache {
     @Override
     public void putObject(Object key, Object value) {
         if (value == null) return;
-        HessianRedisTemplate.putObject(id,key.toString(),value,8,TimeUnit.HOURS);
+        HessianRedisTemplate.putObject(id,key,value,8,TimeUnit.HOURS);
         log.info("put into cache -> {}.",key);
     }
 
@@ -47,7 +47,7 @@ public class MyBatisRedisCache implements Cache {
     @Override
     public Object removeObject(Object key) {
         log.info("remove from cache -> {}.",key);
-        return HessianRedisTemplate.removeObject(id,key.toString());
+        return HessianRedisTemplate.removeObject(id,key);
     }
 
     @Override

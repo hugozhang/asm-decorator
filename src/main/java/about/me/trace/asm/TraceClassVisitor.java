@@ -30,13 +30,10 @@ public class TraceClassVisitor extends ClassVisitor {
             return mv;
         }
 
-//        用visitor模式实现级联会报以下错
 //        java.lang.IllegalArgumentException: LocalVariablesSorter only accepts expanded frames (see ClassReader.EXPAND_FRAMES)
-//        所以用继承来实现
-//        TraceMethodVisitor traceMethodVisitor = new TraceMethodVisitor(mv, access, owner, name, desc);
-//        RedisCacheMethodVisitor methodVisitor = new RedisCacheMethodVisitor(traceMethodVisitor,owner,access, name, desc);
-//        return traceMethodVisitor;
-        RedisCacheMethodVisitor methodVisitor = new RedisCacheMethodVisitor(mv,owner,access, name, desc);
-        return methodVisitor;
+//        也可以用继承来实现 责任链式调用
+        TraceMethodVisitor mv1 = new TraceMethodVisitor(mv,access,owner,name, desc);
+        RedisCacheMethodVisitor mv2 = new RedisCacheMethodVisitor(mv1,access,owner, name, desc);
+        return mv2;
     }
 }

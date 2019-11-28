@@ -21,7 +21,7 @@ public class TimerTest {
 
     @Cache(group = "aa",key = "u",expire = 1,timeUnit = TimeUnit.HOURS)
     public User get(String u)  {
-        if (u == null) return new User();
+//        if (u == null) return new User();
         User user = new User();
         return user;
     }

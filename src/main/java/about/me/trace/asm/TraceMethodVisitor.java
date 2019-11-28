@@ -7,20 +7,20 @@ import java.util.concurrent.TimeUnit;
 
 public class TraceMethodVisitor extends AdviceAdapter {
 
-    private String className;
+    private String owner;
 
     private String methodName;
 
-    public TraceMethodVisitor(MethodVisitor mv,int access,String className, String methodName,String methodDesc) {
+    public TraceMethodVisitor(MethodVisitor mv,int access,String owner, String methodName,String methodDesc) {
         super(Opcodes.ASM5,mv,access,methodName,methodDesc);
-        this.className = className;
+        this.owner = owner;
         this.methodName = methodName;
     }
 
     @Override
     public void onMethodEnter() {
         //trace
-        push(this.className.replace('/', '.') + "." + this.methodName);
+        push(this.owner.replace('/', '.') + "." + this.methodName);
         visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/trace/core/Trace", "enter", "(Ljava/lang/String;)V", false);
     }
 
