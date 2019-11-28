@@ -1,19 +1,20 @@
-package about.me.trace.asm;
+package about.me.core;
 
 import about.me.cache.asm.RedisCacheMethodVisitor;
+import about.me.trace.asm.TraceMethodVisitor;
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.*;
 
 import java.lang.reflect.Modifier;
 
 @Slf4j
-public class TraceClassVisitor extends ClassVisitor {
+public class SuperClassVisitor extends ClassVisitor {
 
     private String owner;
 
     private boolean isInterface;
 
-    public TraceClassVisitor(ClassVisitor cv) {
+    public SuperClassVisitor(ClassVisitor cv) {
         super(Opcodes.ASM5,cv);
     }
 

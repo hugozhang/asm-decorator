@@ -1,6 +1,5 @@
-package about.me.trace.core;
+package about.me.core;
 
-import about.me.trace.asm.TraceEnhance;
 import about.me.trace.test.bean.TimerTest;
 import about.me.trace.test.User;
 import about.me.utils.PkgUtils;
@@ -10,7 +9,7 @@ import org.springframework.util.AntPathMatcher;
 import java.util.Set;
 
 @Slf4j
-public class TraceProvider {
+public class PathScanProvider {
 
     private static AntPathMatcher antPathMatcher = new AntPathMatcher();
 
@@ -23,8 +22,7 @@ public class TraceProvider {
         Set<String> clzFromPkg = PkgUtils.getClzFromPkg(rootDirPath.replace('/','.'));
         for ( String clz : clzFromPkg ) {
             if (antPathMatcher.match(toLocation(locationPattern + locationSuffix),toLocation(clz + locationSuffix))) {
-                log.info("Match class is {}.",clz);
-                TraceEnhance.inject(clz,loader);
+                ByteCodeEnhance.inject(clz,loader);
             }
         }
     }
@@ -46,7 +44,7 @@ public class TraceProvider {
         return location.substring(0, rootDirEnd);
     }
 
-    public TraceProvider() {
+    public PathScanProvider() {
 //        if (basePackages == null) {
 //            throw new IllegalArgumentException("basePackages is required.");
 //        }
@@ -55,7 +53,7 @@ public class TraceProvider {
 
 
     public static void main(String[] args) {
-        new TraceProvider().scan("about.me.trace.test.bean");
+        new PathScanProvider().scan("about.me.trace.test.bean");
         User user = new User();
         user.setName("Java");
         user.setA(123456789);
@@ -63,7 +61,7 @@ public class TraceProvider {
 
 //        System.out.println(isMatch("com/juma/*/a","com/juma/b/a"));
 
-//        new TraceProvider().scan("about/me/**/bean");
+//        new PathScanProvider().scan("about/me/**/bean");
 
 
     }

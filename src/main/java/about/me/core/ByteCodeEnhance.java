@@ -1,4 +1,4 @@
-package about.me.trace.asm;
+package about.me.core;
 
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.ClassReader;
@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 import java.net.URL;
 
 @Slf4j
-public class TraceEnhance {
+public class ByteCodeEnhance {
 
     private static Method findResource;
 
@@ -47,7 +47,7 @@ public class TraceEnhance {
                 log.debug("Add injected class({}) to {} failure!", className, classLoader);
                 return;
             }
-            log.debug("Added trace function for {}", className);
+            log.debug("Added asm enhance function for {}", className);
         } catch (IOException e) {
             log.error(className,e);
         } catch (IllegalAccessException e) {
@@ -60,7 +60,7 @@ public class TraceEnhance {
     private static byte[] injectByteCode(byte[] clazzByte) {
         ClassReader reader = new ClassReader(clazzByte);
         ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
-        ClassVisitor visitor = new TraceClassVisitor(writer);
+        ClassVisitor visitor = new SuperClassVisitor(writer);
         reader.accept(visitor, ClassReader.EXPAND_FRAMES);
         return writer.toByteArray();
     }

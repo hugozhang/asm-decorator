@@ -3,8 +3,7 @@ package about.me.trace.test;
 //import org.apache.dubbo.common.timer.HashedWheelTimer;
 //import org.apache.dubbo.common.timer.Timeout;
 //import org.apache.dubbo.common.timer.TimerTask;
-import about.me.trace.asm.TraceClassVisitor;
-import about.me.trace.test.bean.TimerTest;
+import about.me.core.SuperClassVisitor;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
@@ -35,7 +34,7 @@ public class Generator {
             ClassReader cr = new ClassReader("about/me/trace/test/bean/TimerTest");
             // ClassWriter extends ClassVisitor
             ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-            ClassVisitor classAdapter = new TraceClassVisitor(cw);
+            ClassVisitor classAdapter = new SuperClassVisitor(cw);
             // 使给定的访问者访问Java类的ClassReader
             cr.accept(classAdapter, ClassReader.EXPAND_FRAMES);
             byte[] data = cw.toByteArray();
