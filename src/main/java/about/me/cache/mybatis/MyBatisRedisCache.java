@@ -14,7 +14,7 @@ public class MyBatisRedisCache implements Cache {
 
     public MyBatisRedisCache(String id) {
         if (id == null) {
-            throw new IllegalArgumentException("Cache instances require an ID");
+            throw new IllegalArgumentException("MyCache instances require an ID");
         }
         this.id = id;
     }

@@ -1,9 +1,9 @@
 package about.me.trace.test.bean;
 
 
-import about.me.cache.annotation.Cache;
+import about.me.cache.annotation.MyCache;
+import about.me.cache.annotation.MyCacheEvict;
 import about.me.cache.redis.HessianRedisTemplate;
-import about.me.trace.core.Trace;
 import about.me.trace.test.User;
 
 import java.util.concurrent.TimeUnit;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TimerTest {
 
-//    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
+//    @MyCache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
 //    public User get(String a)  {
 //
 //        User user = new User();
@@ -19,8 +19,10 @@ public class TimerTest {
 //        return user;
 //    }
 
-    @Cache(group = "aa",key = "u",expire = 1,timeUnit = TimeUnit.HOURS)
+//    @MyCacheEvict(group = "aa",key = "u")
+    @MyCache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
     public User get(String u)  {
+//        HessianRedisTemplate.removeObject("","");
 //        if (u == null) return new User();
         User user = new User();
         return user;
@@ -47,7 +49,7 @@ public class TimerTest {
 //        throw new RuntimeException("");
 //    }
 
-//    @Cache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
+//    @MyCache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
 //    public Object get(String a)  {
 //        Object o = HessianRedisTemplate.getObject("", "");
 //        if (o != null) return o;

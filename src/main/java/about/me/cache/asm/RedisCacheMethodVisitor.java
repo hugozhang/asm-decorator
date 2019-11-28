@@ -1,6 +1,7 @@
 package about.me.cache.asm;
 
-import about.me.cache.annotation.Cache;
+import about.me.cache.annotation.MyCache;
+import about.me.cache.annotation.MyCacheEvict;
 import about.me.cache.asm.bean.MethodArg;
 import about.me.cache.asm.bean.ClassField;
 import about.me.utils.AsmUtils;
@@ -15,26 +16,41 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class RedisCacheMethodVisitor extends AdviceAdapter {
 
+    private String owner;
+
+    private String methodName;
+
     private String methodDesc;
+
+    private String target;
 
     private CacheAnnotationVisitor cacheAnnotation;
 
     private boolean isCache = Boolean.FALSE;
 
+    private boolean isCacheEvict = Boolean.FALSE;
+
     private Map<String, MethodArg> methodArg;
 
     public RedisCacheMethodVisitor(MethodVisitor mv, int access,String owner, String methodName, String methodDesc) {
         super(ASM5,mv,access,methodName,methodDesc);
+        this.owner = owner;
+        this.methodName = methodName;
         this.methodDesc = methodDesc;
         this.methodArg = AsmUtils.readMethodArg(owner);
+        this.target = this.owner.replace('/', '.') + "." + this.methodName;
     }
 
     @Override
     public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
         AnnotationVisitor av = super.visitAnnotation(descriptor, visible);
-        if (Type.getDescriptor(Cache.class).equals(descriptor)) {
+        if (Type.getDescriptor(MyCache.class).equals(descriptor)) {
             cacheAnnotation = new CacheAnnotationVisitor(av);
             isCache = Boolean.TRUE;
+            return cacheAnnotation;
+        } else if (Type.getDescriptor(MyCacheEvict.class).equals(descriptor)) {
+            isCacheEvict = Boolean.TRUE;
+            cacheAnnotation = new CacheAnnotationVisitor(av);
             return cacheAnnotation;
         }
         return av;
@@ -73,29 +89,35 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
         String[] keys = cacheKey.split("\\.");
         int len = keys.length;
         MethodArg arg = this.methodArg.get(keys[0]);
-        Type type = Type.getType(arg.desc);
         if (!this.methodArg.containsKey(keys[0])) {
-            throw new IllegalArgumentException("argument " + keys[0] + " not exist.");
+            throw new IllegalArgumentException("argument `" + keys[0] + "` not exist,target is `" + this.target + "`.");
         }
+        Type type = Type.getType(arg.desc);
         loadArg(arg.index - 1);//非静态方法第一个参数是this
         if (len == 1) {
             box(type);//基本类型需要装箱
         } else if (len == 2) {
             Map<String, ClassField> classField = AsmUtils.readClassField(type.getInternalName());
             if (!classField.containsKey(keys[1])) {
-                throw new IllegalArgumentException("argument " +keys[0] + " -> " + type.getClassName() + " not exist field -> " + keys[1] + ".");
+                throw new IllegalArgumentException("argument `" +keys[0] + "` -> `" + this.target + "` not exist field -> `" + keys[1] + "`.");
             }
             ClassField cf = classField.get(keys[1]);
             visitMethodInsn(Opcodes.INVOKEVIRTUAL, arg.desc, "get"+ StringUtils.capitalize(keys[1]), "()" + cf.desc, false);
             box(Type.getType(cf.desc));
         } else {
-            throw new IllegalArgumentException("argument " + cacheKey + " invalid.");
+            throw new IllegalArgumentException("argument `" + cacheKey + "` invalid,target is `" + this.target + "`.");
         }
     }
 
     @Override
     public void onMethodEnter() {
-        super.onMethodEnter();
+        if (isCache && isCacheEvict) {
+            throw new IllegalArgumentException("@MyCache and @MyCacheEvict can't on the method at the same time,target is `" + this.target + "`.");
+        }
+        cacheOnMethodEnter();
+    }
+
+    private void cacheOnMethodEnter() {
         if (!isCache) return;
         //cache
         push(cacheAnnotation.cacheParam.group);
@@ -120,8 +142,13 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
 
     @Override
     public void onMethodExit(int opcode) {
+        cacheOnMethodExit(opcode);
+        cacheEvictOnMethodExit(opcode);
+    }
+
+    private void cacheOnMethodExit(int opcode) {
         if (opcode == Opcodes.ATHROW || opcode == Opcodes.RETURN || !isCache) return;
-        //有返回值并且有@Cache
+        //有返回值并且有@MyCache
         dup();
         box(Type.getReturnType(this.methodDesc));//主要解决返回基本类型的情况
         //如果不想存临时变量，就使用把栈顶元素交换两次 swap
@@ -138,7 +165,16 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
 //        以下两个是测试方法
 //        visitMethodInsn(Opcodes.INVOKESTATIC, Type.getInternalName(Print.class), "print", "(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;J)V", false);
 //        visitMethodInsn(Opcodes.INVOKESTATIC, Type.getInternalName(Print.class), "print2", "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Object;J)V", false);
-        super.onMethodExit(opcode);
+    }
+
+    private void cacheEvictOnMethodExit(int opcode) {
+        if (opcode == Opcodes.ATHROW || !isCacheEvict) return;
+        if (opcode != Opcodes.RETURN) {
+            throw new IllegalArgumentException("@MyCacheEvict invalid return value,target is `" + this.target + "`.");
+        }
+        push(cacheAnnotation.cacheParam.group);
+        parseKey();
+        visitMethodInsn(Opcodes.INVOKESTATIC, "about/me/cache/redis/HessianRedisTemplate", "removeObject", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Long;", false);
     }
 
     public static void main(String[] args) {
