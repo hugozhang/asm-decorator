@@ -1,7 +1,7 @@
 package about.me.core;
 
-import about.me.cache.asm.RedisCacheMethodVisitor;
-import about.me.trace.asm.TraceMethodVisitor;
+import about.me.asm.cache.visitor.RedisCacheMethodVisitor;
+import about.me.asm.trace.visitor.TraceMethodVisitor;
 import lombok.extern.slf4j.Slf4j;
 import org.objectweb.asm.*;
 
@@ -31,10 +31,10 @@ public class SuperClassVisitor extends ClassVisitor {
             return mv;
         }
 
-//        java.lang.IllegalArgumentException: LocalVariablesSorter only accepts expanded frames (see ClassReader.EXPAND_FRAMES)
-//        也可以用继承来实现 责任链式调用
-        TraceMethodVisitor mv1 = new TraceMethodVisitor(mv,access,owner,name, desc);
-        RedisCacheMethodVisitor mv2 = new RedisCacheMethodVisitor(mv1,access,owner, name, desc);
-        return mv2;
+        /*java.lang.IllegalArgumentException: LocalVariablesSorter only accepts expanded frames (see ClassReader.EXPAND_FRAMES)
+        也可以用继承来实现 责任链式调用*/
+        TraceMethodVisitor v1 = new TraceMethodVisitor(mv,access,owner,name, desc);
+        RedisCacheMethodVisitor v2 = new RedisCacheMethodVisitor(v1,access,owner, name, desc);
+        return v2;
     }
 }

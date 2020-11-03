@@ -1,23 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="78285bd9-8d77-4265-86bb-ba1b9a19fc71" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCacheEvict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/annotation/MyCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCacheEvict.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/annotation/MyCacheEvict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/asm/CacheAnnotationVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/asm/RedisCacheMethodVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/ClassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/asm/bean/ClassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/MethodArg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/asm/bean/MethodArg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/DummyReadWriteLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/mybatis/DummyReadWriteLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/mybatis/MyBatisRedisCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/redis/HessianRedisSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/redis/HessianRedisTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/core/PathScanProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/core/PathScanProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/core/SuperClassVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/core/SuperClassVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/asm/TraceMethodVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/core/ThreadLocalTrace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/core/Trace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/core/Trace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/core/TraceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/bean/TestBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/bean/TimerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/frame/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/frame/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/frame/TimeCountAdapater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/frame/TimeCountAdapater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/test/stati/Print.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/test/stati/Print.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/view/Ansi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/view/TreeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/trace/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/utils/AsmUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/utils/AsmUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/utils/DateUtils.java" beforeDir="false" />
     </list>
-    <ignored path="target/" />
-    <ignored path="$PROJECT_DIR$/target/classes/" />
-    <ignored path="$PROJECT_DIR$/target/maven-status/" />
-    <ignored path="$PROJECT_DIR$/target/maven-archiver/" />
-    <manually-removed-from-ignored>
-      <directory path="$PROJECT_DIR$/out/" />
-      <directory path="$PROJECT_DIR$/target/" />
-    </manually-removed-from-ignored>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,130 +64,6 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="trace" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCache.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/annotation/Documented.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="171" column="39" lean-forward="true" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="22" column="65" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/ClassReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="1183" selection-start-line="1183" selection-end-line="1183" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding>
-                <element signature="e#283#284#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCacheEvict.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#955#956#0" expanded="true" />
-                <element signature="e#1006#1007#0" expanded="true" />
-                <element signature="e#1254#1255#0" expanded="true" />
-                <element signature="e#1308#1309#0" expanded="true" />
-                <element signature="e#1455#1456#0" expanded="true" />
-                <element signature="e#1515#1516#0" expanded="true" />
-                <element signature="e#1959#1960#0" expanded="true" />
-                <element signature="e#2010#2011#0" expanded="true" />
-                <element signature="e#2245#2246#0" expanded="true" />
-                <element signature="e#2299#2300#0" expanded="true" />
-                <element signature="e#2350#2351#0" expanded="true" />
-                <element signature="e#2392#2393#0" expanded="true" />
-                <element signature="e#2444#2445#0" expanded="true" />
-                <element signature="e#2495#2496#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.19.RELEASE/spring-core-4.3.19.RELEASE-sources.jar!/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -159,209 +74,33 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>cast</find>
-      <find>MyMethodVisitor</find>
-      <find>dup</find>
-      <find>onMethodEnter</find>
-      <find>visit</find>
-      <find>DUP</find>
-      <find>visitLdcInsn</find>
-      <find>onMethodExit</find>
-      <find>visitE</find>
-      <find>duo</find>
-      <find>firstLocal</find>
-      <find>init</find>
-      <find>localTypes</find>
-      <find>access</find>
-      <find>argumentTypes</find>
-      <find>visitLabel</find>
-      <find>visitInsn</find>
-      <find>RETURN</find>
-      <find>visitVarInsn</find>
-      <find>RETUR</find>
-      <find>newLocals</find>
-      <find>newLocal</find>
-      <find>nextLocal</find>
-      <find>returnType</find>
-      <find>ini</find>
-      <find>new</find>
-      <find>remappedLocalTypes</find>
-      <find>idx</find>
-      <find>invoke</find>
-      <find>visitMethodInsn</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>MyGeneratorAdapter</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheMethodVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/stati/Print.java" />
-        <option value="$PROJECT_DIR$/readme.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/Trace.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/PkgUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/ThreadUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/DateUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/LocalVariableVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/ClassField.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/AsmUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/Arg.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/MethodArg.java" />
-        <option value="$PROJECT_DIR$/.idea/.name" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/DummyReadWriteLock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/view/Ansi.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/view/TreeView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/Generator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/asm/MyLocalVariablesSorter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/asm/MyGeneratorAdapter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TestBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/utils/AsmConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/asm/MyMethodVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceClassVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceEnhance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/AsmEnhance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/MethodEnhance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/asm/SuperClassVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/core/SuperClassVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/core/PathScanProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/core/PathScanProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/core/MethodEnhance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/core/ByteCodeEnhance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/Cache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCachePut.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCacheEvict.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java" />
-      </list>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\Program Files\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.6.3\conf\settings-BeiJing.xml" />
+      </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
-  </component>
-  <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1">
-      <flattenPackages PackagesPane="false" ProjectPane="false" />
-      <hideEmptyPackages PackagesPane="true" ProjectPane="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-              <item name="cache" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-              <item name="cache" type="1f31426a:PackageElementNode" />
-              <item name="annotation" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-              <item name="cache" type="1f31426a:PackageElementNode" />
-              <item name="asm" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-              <item name="cache" type="1f31426a:PackageElementNode" />
-              <item name="redis" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-              <item name="trace" type="1f31426a:PackageElementNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="58d84e3e:PackageViewProjectNode" />
-              <item name="asm-decorator" type="616d4139:PackageViewModuleNode" />
-              <item name="about.me" type="1f31426a:PackageElementNode" />
-              <item name="trace" type="1f31426a:PackageElementNode" />
-              <item name="asm" type="1f31426a:PackageElementNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="asm-decorator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="asm-decorator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+  <component name="ProjectId" id="1jl7Kb0LDELoH0jhdGyJwoMv0pa" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
     <property name="io.gulp.intellij.baseDir" value="$PROJECT_DIR$/target/classes/about/me/trace/test" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4383721" />
-    <property name="settings.editor.selected.configurable" value="asmbytecodeplugin" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -377,25 +116,13 @@
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Application.PathScanProvider">
     <configuration name="CacheAnnotationVisitor" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="about.me.cache.asm.CacheAnnotationVisitor" />
+      <option name="MAIN_CLASS_NAME" value="about.me.asm.cache.asm.CacheAnnotationVisitor" />
       <module name="asm-decorator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="about.me.cache.asm.*" />
+          <option name="PATTERN" value="about.me.asm.cache.asm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -404,11 +131,11 @@
       </method>
     </configuration>
     <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="about.me.trace.test.Generator" />
+      <option name="MAIN_CLASS_NAME" value="about.me.asm.trace.test.Generator" />
       <module name="asm-decorator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="about.me.trace.test.*" />
+          <option name="PATTERN" value="about.me.asm.trace.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -430,11 +157,11 @@
       </method>
     </configuration>
     <configuration name="RedisCacheMethodVisitor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="about.me.cache.asm.RedisCacheMethodVisitor" />
+      <option name="MAIN_CLASS_NAME" value="about.me.asm.cache.asm.RedisCacheMethodVisitor" />
       <module name="asm-decorator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="about.me.cache.asm.*" />
+          <option name="PATTERN" value="about.me.asm.cache.asm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -443,7 +170,7 @@
       </method>
     </configuration>
     <configuration name="ThreadLocalTrace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="about.me.trace.core.ThreadLocalTrace" />
+      <option name="MAIN_CLASS_NAME" value="about.me.asm.trace.core.ThreadLocalTrace" />
       <module name="asm-decorator" />
       <extension name="coverage">
         <pattern>
@@ -456,7 +183,7 @@
       </method>
     </configuration>
     <configuration name="Trace" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="about.me.trace.core.Trace" />
+      <option name="MAIN_CLASS_NAME" value="about.me.asm.trace.core.Trace" />
       <module name="asm-decorator" />
       <extension name="coverage">
         <pattern>
@@ -468,7 +195,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="asm-decorator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -481,7 +219,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <module name="asm-decorator" />
       <option name="filePath" />
       <option name="vmParameters" />
@@ -533,11 +271,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",SHOW_FIELDS,SHOW_NON_PUBLIC,SHOW_INTERFACES" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+    <configuration>C:\Users\tech-winning\AppData\Roaming\Subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -546,66 +282,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1573096630618</updated>
+      <workItem from="1604366764024" duration="3925000" />
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Designer" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="Favorites" order="2" sideWeight="0.70481926" side_tool="true" weight="0.16380544" />
-      <window_info id="Image Layers" order="3" />
-      <window_info content_ui="combo" id="Project" order="4" sideWeight="0.7523992" weight="0.2725322" />
-      <window_info id="Structure" order="5" sideWeight="0.24760076" side_tool="true" weight="0.22103004" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.23012048" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49642345" weight="0.426506" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5035765" side_tool="true" weight="0.6313253" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32891566" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49642345" weight="0.43855423" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49928468" weight="0.3433735" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="ASM" order="1" weight="0.4062947" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297568" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="Capture Tool" order="1" />
-      <window_info id="Favorites" order="2" sideWeight="0.70481926" side_tool="true" weight="0.16380544" />
-      <window_info id="Image Layers" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="4" sideWeight="0.7523992" visible="true" weight="0.2725322" />
-      <window_info id="Structure" order="5" sideWeight="0.24760076" side_tool="true" weight="0.22103004" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.23012048" />
-      <window_info anchor="bottom" id="Terminal" order="1" sideWeight="0.49642345" weight="0.426506" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5035765" side_tool="true" weight="0.6313253" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="4" weight="0.32891566" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32891566" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.49642345" visible="true" weight="0.43855423" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.49928468" weight="0.3433735" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="ASM" order="1" weight="0.4062947" />
-      <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.3297568" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="4" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-    </layout-to-restore>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1604366886376">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1604366886376" />
+    <state x="270" y="0" key="SettingsEditor" timestamp="1604368627802">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1604368627802" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1604370086291">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1604370086291" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -613,127 +320,106 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/ClassReader.java</url>
           <line>1090</line>
-          <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/about/me/trace/core/Trace.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/trace/core/Trace.java</url>
           <line>15</line>
-          <properties />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/utils/PkgUtils.java</url>
           <line>106</line>
-          <properties />
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/utils/PkgUtils.java</url>
           <line>91</line>
-          <properties />
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/LocalVariablesSorter.java</url>
           <line>110</line>
-          <properties />
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceMethodVisitor.java</url>
           <line>70</line>
-          <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceMethodVisitor.java</url>
           <line>286</line>
-          <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceMethodVisitor.java</url>
           <line>273</line>
-          <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/Textifier.java</url>
           <line>1053</line>
-          <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceMethodVisitor.java</url>
           <line>117</line>
-          <properties />
           <option name="timeStamp" value="104" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceMethodVisitor.java</url>
           <line>308</line>
-          <properties />
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/GeneratorAdapter.java</url>
           <line>833</line>
-          <properties />
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/LocalVariablesSorter.java</url>
           <line>236</line>
-          <properties />
           <option name="timeStamp" value="175" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/Type.java</url>
           <line>442</line>
-          <properties />
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/MyMethodVisitor.java</url>
           <line>1388</line>
-          <properties />
           <option name="timeStamp" value="191" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/MyMethodVisitor.java</url>
           <line>658</line>
-          <properties />
           <option name="timeStamp" value="195" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/MyMethodVisitor.java</url>
           <line>1341</line>
-          <properties />
           <option name="timeStamp" value="196" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/MyMethodVisitor.java</url>
           <line>1323</line>
-          <properties />
           <option name="timeStamp" value="199" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/MyMethodVisitor.java</url>
           <line>1194</line>
-          <properties />
           <option name="timeStamp" value="200" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/cache/asm/RedisCacheMethodVisitor.java</url>
           <line>46</line>
-          <properties />
           <option name="timeStamp" value="206" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/about/me/asm/cache/asm/RedisCacheMethodVisitor.java</url>
           <line>170</line>
-          <properties />
           <option name="timeStamp" value="208" />
         </line-breakpoint>
       </breakpoints>
@@ -787,526 +473,5 @@
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
     </expressions>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/ASMifier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27489">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/CheckAnnotationAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceClassVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/TraceFieldVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-util/7.2/asm-util-7.2-sources.jar!/org/objectweb/asm/util/ASMifierSupport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/AdviceAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/CodeSizeEvaluator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2352">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/FieldRemapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/AnnotationRemapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-528">
-          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/ClassRemapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="59" column="13" selection-start-line="59" selection-start-column="13" selection-end-line="59" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22.jar!/changelog.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.5.RELEASE/spring-aop-4.2.5.RELEASE-sources.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/aopalliance/aopalliance/1.0/aopalliance-1.0.jar!/org/aopalliance/aop/Advice.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25304">
-          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-analysis/7.2/asm-analysis-7.2-sources.jar!/org/objectweb/asm/tree/analysis/Analyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8447">
-          <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/AnalyzerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7349">
-          <caret line="75" column="30" selection-start-line="75" selection-start-column="30" selection-end-line="75" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22.jar!/lombok/Builder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/Builder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/bean/MethodArg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/javac/handlers/JavacHandlerUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3398">
-          <caret line="862" column="80" selection-start-line="862" selection-start-column="80" selection-end-line="862" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/Lombok.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/NonNull.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22-sources.jar!/lombok/Setter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-91">
-          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.22/lombok-1.16.22.jar!/lombok/bytecode/AsmUtil$1.SCL.lombok">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/utils/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm-commons/7.2/asm-commons-7.2-sources.jar!/org/objectweb/asm/commons/GeneratorAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2207">
-          <caret line="731" column="21" lean-forward="true" selection-start-line="731" selection-start-column="21" selection-end-line="731" selection-end-column="21" />
-          <folding>
-            <element signature="e#10895#10896#0" expanded="true" />
-            <element signature="e#10933#10934#0" expanded="true" />
-            <element signature="e#16524#16525#0" expanded="true" />
-            <element signature="e#16587#16588#0" expanded="true" />
-            <element signature="e#16874#16875#0" expanded="true" />
-            <element signature="e#16938#16939#0" expanded="true" />
-            <element signature="e#17390#17391#0" expanded="true" />
-            <element signature="e#17446#17447#0" expanded="true" />
-            <element signature="e#18053#18054#0" expanded="true" />
-            <element signature="e#18096#18097#0" expanded="true" />
-            <element signature="e#18674#18675#0" expanded="true" />
-            <element signature="e#18731#18732#0" expanded="true" />
-            <element signature="e#19268#19269#0" expanded="true" />
-            <element signature="e#19319#19320#0" expanded="true" />
-            <element signature="e#19804#19805#0" expanded="true" />
-            <element signature="e#19850#19851#0" expanded="true" />
-            <element signature="e#20501#20502#0" expanded="true" />
-            <element signature="e#20548#20549#0" expanded="true" />
-            <element signature="e#21132#21133#0" expanded="true" />
-            <element signature="e#21186#21187#0" expanded="true" />
-            <element signature="e#21373#21374#0" expanded="true" />
-            <element signature="e#21428#21429#0" expanded="true" />
-            <element signature="e#21730#21731#0" expanded="true" />
-            <element signature="e#21765#21766#0" expanded="true" />
-            <element signature="e#21828#21829#0" expanded="true" />
-            <element signature="e#21864#21865#0" expanded="true" />
-            <element signature="e#21925#21926#0" expanded="true" />
-            <element signature="e#21960#21961#0" expanded="true" />
-            <element signature="e#22023#22024#0" expanded="true" />
-            <element signature="e#22059#22060#0" expanded="true" />
-            <element signature="e#22125#22126#0" expanded="true" />
-            <element signature="e#22163#22164#0" expanded="true" />
-            <element signature="e#22229#22230#0" expanded="true" />
-            <element signature="e#22267#22268#0" expanded="true" />
-            <element signature="e#22442#22443#0" expanded="true" />
-            <element signature="e#22481#22482#0" expanded="true" />
-            <element signature="e#22544#22545#0" expanded="true" />
-            <element signature="e#22580#22581#0" expanded="true" />
-            <element signature="e#23738#23739#0" expanded="true" />
-            <element signature="e#23780#23781#0" expanded="true" />
-            <element signature="e#24246#24247#0" expanded="true" />
-            <element signature="e#24287#24288#0" expanded="true" />
-            <element signature="e#28571#28572#0" expanded="true" />
-            <element signature="e#28599#28600#0" expanded="true" />
-            <element signature="e#28743#28744#0" expanded="true" />
-            <element signature="e#28773#28774#0" expanded="true" />
-            <element signature="e#31626#31627#0" expanded="true" />
-            <element signature="e#31665#31666#0" expanded="true" />
-            <element signature="e#31884#31885#0" expanded="true" />
-            <element signature="e#31933#31934#0" expanded="true" />
-            <element signature="e#32159#32160#0" expanded="true" />
-            <element signature="e#32211#32212#0" expanded="true" />
-            <element signature="e#35074#35075#0" expanded="true" />
-            <element signature="e#35135#35136#0" expanded="true" />
-            <element signature="e#40790#40791#0" expanded="true" />
-            <element signature="e#40848#40849#0" expanded="true" />
-            <element signature="e#41022#41023#0" expanded="true" />
-            <element signature="e#41059#41060#0" expanded="true" />
-            <element signature="e#41740#41741#0" expanded="true" />
-            <element signature="e#41778#41779#0" expanded="true" />
-            <element signature="e#43060#43061#0" expanded="true" />
-            <element signature="e#43103#43104#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/MethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="166" column="5" lean-forward="true" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/util/concurrent/TimeUnit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/DummyReadWriteLock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/mybatis/MyBatisRedisCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/core/ByteCodeEnhance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1053">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/core/PathScanProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-317">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/core/SuperClassVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/TraceEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/Trace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="34" lean-forward="true" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.19.RELEASE/spring-core-4.3.19.RELEASE-sources.jar!/org/springframework/core/BridgeMethodResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-395">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/core/ThreadLocalTrace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.19.RELEASE/spring-core-4.3.19.RELEASE-sources.jar!/org/springframework/core/LocalVariableTableParameterNameDiscoverer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/src.zip!/java/lang/annotation/Documented.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/redis/HessianRedisTemplate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="61" column="33" lean-forward="true" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1254#1255#0" expanded="true" />
-            <element signature="e#1308#1309#0" expanded="true" />
-            <element signature="e#1455#1456#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2010#2011#0" expanded="true" />
-            <element signature="e#2245#2246#0" expanded="true" />
-            <element signature="e#2299#2300#0" expanded="true" />
-            <element signature="e#2350#2351#0" expanded="true" />
-            <element signature="e#2392#2393#0" expanded="true" />
-            <element signature="e#2444#2445#0" expanded="true" />
-            <element signature="e#2495#2496#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE-sources.jar!/org/springframework/cache/annotation/CachePut.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/CacheAnnotationVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#321#322#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.2.5.RELEASE/spring-context-4.2.5.RELEASE-sources.jar!/org/springframework/cache/annotation/Cacheable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/ow2/asm/asm/7.2/asm-7.2-sources.jar!/org/objectweb/asm/ClassReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="1183" selection-start-line="1183" selection-end-line="1183" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/annotation/MyCacheEvict.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/test/bean/TimerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/trace/asm/TraceMethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="22" column="65" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/about/me/cache/asm/RedisCacheMethodVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="171" column="39" lean-forward="true" selection-start-line="171" selection-start-column="39" selection-end-line="171" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>trace</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.4383721" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

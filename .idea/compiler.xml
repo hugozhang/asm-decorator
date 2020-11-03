@@ -10,6 +10,6 @@
         <module name="asm-decorator" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="7" />
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 package about.me.core;
 
-import about.me.trace.test.bean.TimerTest;
-import about.me.trace.test.User;
+import about.me.asm.test.bean.TimerTest;
+import about.me.asm.test.User;
 import about.me.utils.PkgUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.AntPathMatcher;
