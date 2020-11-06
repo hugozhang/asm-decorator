@@ -23,20 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78285bd9-8d77-4265-86bb-ba1b9a19fc71" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/visitor/RedisCacheMethodVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/cache/visitor/RedisCacheMethodVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/asm/test/bean/TimerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/test/bean/TimerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/bean/ThreadLocalTrace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/bean/ThreadLocalTrace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/bean/Trace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/bean/Trace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/bean/TraceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/asm/trace/bean/TraceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/core/ByteCodeEnhance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/core/ByteCodeEnhance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/core/PathScanProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/core/PathScanProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/about/me/utils/PkgUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/about/me/utils/PkgUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +216,7 @@
       <workItem from="1604477669508" duration="10000" />
       <workItem from="1604477705518" duration="1842000" />
       <workItem from="1604479792817" duration="2000" />
-      <workItem from="1604584771893" duration="2965000" />
+      <workItem from="1604584771893" duration="3293000" />
     </task>
     <servers />
   </component>
