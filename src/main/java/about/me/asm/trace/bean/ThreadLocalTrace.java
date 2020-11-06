@@ -31,35 +31,36 @@ public class ThreadLocalTrace {
         ThreadLocalTrace.getInstance().threadBoundEntity.remove();
     }
 
-
     public static void finish() {
         if (--threadBoundEntity.get().deep == 0) {
             log.info(ThreadLocalTrace.getView().draw());
-            System.out.println(ThreadLocalTrace.getView().draw());
             ThreadLocalTrace.reset();
         }
     }
 
     public static void main(String[] args) {
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.a"));
+        ThreadLocalTrace.getView().begin("com.juma.tgm.a");
 
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c"));
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c2"));
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.b"));
-        System.out.println(ThreadLocalTrace.getView().begin("com.juma.tgm.c"));
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().end());
-        System.out.println(ThreadLocalTrace.getView().draw());
+        ThreadLocalTrace.getView().begin("com.juma.tgm.b");
+        ThreadLocalTrace.getView().begin("com.juma.tgm.c");
+        ThreadLocalTrace.getView().begin("com.juma.tgm.c2");
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().begin("com.juma.tgm.b");
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().begin("com.juma.tgm.b");
+        ThreadLocalTrace.getView().begin("com.juma.tgm.c");
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.getView().end();
+        ThreadLocalTrace.finish();
+
+        System.out.print(ThreadLocalTrace.getView().draw());
+
         ThreadLocalTrace.reset();
-        System.out.println(ThreadLocalTrace.getView().draw());
+        ThreadLocalTrace.getView().draw();
 
         ThreadLocalTrace.reset();
 

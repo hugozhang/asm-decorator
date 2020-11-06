@@ -45,8 +45,8 @@ public class RedisCacheMethodVisitor extends AdviceAdapter {
     public AnnotationVisitor visitAnnotation(String descriptor, boolean visible) {
         AnnotationVisitor av = super.visitAnnotation(descriptor, visible);
         if (Type.getDescriptor(MyCache.class).equals(descriptor)) {
-            cacheAnnotation = new CacheAnnotationVisitor(av);
             isCache = Boolean.TRUE;
+            cacheAnnotation = new CacheAnnotationVisitor(av);
             return cacheAnnotation;
         } else if (Type.getDescriptor(MyCacheEvict.class).equals(descriptor)) {
             isCacheEvict = Boolean.TRUE;

@@ -18,7 +18,7 @@ public class TimerTest {
 //    }
 
 //    @MyCacheEvict(group = "aa",key = "u")
-    @MyCache(group = "aa",key = "bb",expire = 1,timeUnit = TimeUnit.DAYS)
+    @MyCache(group = "aa",key = "u",expire = 1,timeUnit = TimeUnit.DAYS)
     public User get(String u)  {
 //        HessianRedisTemplate.removeObject("","");
 //        if (u == null) return new User();

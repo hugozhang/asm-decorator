@@ -33,21 +33,21 @@ public class ByteCodeEnhance {
         try {
             URL url = (URL) findResource.invoke(classLoader, new Object[] { className.replace('.','/') + ".class" });
             if (url == null) {
-                log.debug("{} not found!", className);
+                log.debug("{} not found.", className);
                 return;
             }
             byte[] b = getClassByte(url);
             b = injectByteCode(b);
             if (b == null || b.length <= 0) {
-                log.debug("Inject {} failure!", className);
+                log.debug("Inject {} failure.", className);
                 return;
             }
             Class<?> clazz = defineClass(className, b, classLoader);
             if (clazz == null) {
-                log.debug("Add injected class({}) to {} failure!", className, classLoader);
+                log.debug("Add injected class({}) to {} failure.", className, classLoader);
                 return;
             }
-            log.debug("Added asm enhance function for {}", className);
+            log.debug("Added asm enhance function for {}.", className);
         } catch (IOException e) {
             log.error(className,e);
         } catch (IllegalAccessException e) {

@@ -53,7 +53,7 @@ public class PathScanProvider {
 
 
     public static void main(String[] args) {
-        new PathScanProvider().scan("about.me.trace.test.bean");
+        new PathScanProvider().scan("about.me.asm.test.bean");
         User user = new User();
         user.setName("Java");
         user.setA(123456789);

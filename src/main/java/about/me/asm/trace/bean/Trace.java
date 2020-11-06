@@ -19,6 +19,8 @@ public class Trace {
 
     public static void main(String[] args) {
         Trace.enter("com.juma.a");
+        Trace.enter("com.juma.b");
+        Trace.exit("com.juma.b end");
         Trace.exit("throw exception");
         Trace.enter("com.juma.a");
         Trace.exit();

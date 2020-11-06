@@ -91,11 +91,9 @@ public class PkgUtils {
     private static void findClassesByJar(String pkgName, JarFile jar, Set<String> classes) {
         String pkgDir = pkgName.replace(".", "/");
         Enumeration<JarEntry> entry = jar.entries();
-        JarEntry jarEntry;
-        String name, className;
         while (entry.hasMoreElements()) {
-            jarEntry = entry.nextElement();
-            name = jarEntry.getName();
+            JarEntry jarEntry = entry.nextElement();
+            String name = jarEntry.getName();
             if (name.charAt(0) == '/') {
                 name = name.substring(1);
             }
@@ -104,7 +102,7 @@ public class PkgUtils {
                 continue;
             }
             // 去掉后面的".class", 将路径转为package格式
-            className = name.substring(0, name.length() - 6);
+            String className = name.substring(0, name.length() - 6);
             classes.add(className.replace("/", "."));
         }
     }

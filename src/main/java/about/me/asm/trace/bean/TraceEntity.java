@@ -2,12 +2,10 @@ package about.me.asm.trace.bean;
 
 import about.me.asm.trace.view.TreeView;
 import about.me.utils.ThreadUtils;
-import lombok.Data;
 
-import java.time.Instant;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-@Data
 public class TraceEntity {
 
     protected TreeView view;
@@ -20,8 +18,8 @@ public class TraceEntity {
     }
 
     private TreeView createTreeView() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        String threadTitle = "time=" + dtf.format(Instant.now()) + ";" + ThreadUtils.getThreadTitle(Thread.currentThread());
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS");
+        String threadTitle = "time=" + dtf.format(LocalDateTime.now()) + ";" + ThreadUtils.getThreadTitle(Thread.currentThread());
         return new TreeView(true, threadTitle);
     }
 
